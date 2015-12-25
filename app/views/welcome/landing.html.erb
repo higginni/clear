@@ -1,19 +1,35 @@
 
 <div><h1>Welcome</h1></div>
 
+<!-- Try 
 
+	if(signed in == true)
+		Dont show these buttons
+
+	}
+	else
+		Show buttons and not navigation 
+
+
+ie - if(!notSignedIn)
+	{
+		show login sign up buttons
+	}
+ -->
 	<div class = "container">
 		<div class="row">
-			<center>
-				<div class="col-md-6">
-				<%= link_to 'Sign up', '/sign_up', :class => 'btn btn-primary btn-lg btn-block' %>
-				</div>
+			<% if signed_out? %>
+				<center>
+					<div class="col-md-6">
+					<%= link_to 'Sign up', '/sign_up', :class => 'btn btn-primary btn-lg btn-block' %>
+					</div>
 
-				<div class="col-md-6">
-				<%= link_to 'Sign in', '/sign_in', :class => 'btn btn-success btn-lg btn-block' %>
-				</div>
-			<br>
-			</center>
+					<div class="col-md-6">
+					<%= link_to 'Sign in', '/sign_in', :class => 'btn btn-success btn-lg btn-block' %>
+					</div>
+				<br>
+				</center>
+			<% end %>
 		</div>
 	</div>
 
