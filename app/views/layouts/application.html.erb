@@ -19,7 +19,7 @@
 
      <ul class="nav navbar-nav pull-right">
     <% if signed_in? %>
-      <li><span><%= current_user.email %></span></li>
+      <li style="color:grey"><span><%= current_user.email %></span></li>
       <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
     <% else %>
       <li><%= link_to 'Sign in', sign_in_path %></li>
@@ -38,8 +38,14 @@
   <% end %>
 <div id="navbar">
   <% if signed_in? %>
-    <ul class="nav navbar-nav">
-      <li><%= link_to 'Add Page', new_page_path %></li>
+    <ul class="nav navbar-nav pull-right">
+      <li><%= link_to 'Profile', new_page_path %></li>
+    </ul>
+    <ul class="nav navbar-nav pull-right">
+      <li><%= link_to 'Stats', new_page_path %></li>
+    </ul>
+    <ul class="nav navbar-nav pull-right">
+      <li><%= link_to 'Enter a score', new_page_path %></li>
     </ul>
       </div>
   <% end %>
