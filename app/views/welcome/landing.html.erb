@@ -1,5 +1,5 @@
 
-<div><h1>Welcome</h1></div>
+<!-- <div><h1>Welcome</h1></div> -->
 
 <!-- Try 
 
@@ -16,30 +16,32 @@ ie - if(!notSignedIn)
 		show login sign up buttons
 	}
  -->
-	<div class = "container">
-		<div class="row">
-			<% if signed_out? %>
-				<center>
-					<div class="col-md-6">
-					<%= link_to 'Sign up', '/sign_up', :class => 'btn btn-primary btn-lg btn-block' %>
-					</div>
+ 	
+			<div class = "container">
+				<div class="row">
+					<% if signed_out? %>
+						<center>
+							<div class="col-md-6">
+							<%= link_to 'Sign up', '/sign_up', :class => 'btn btn-primary btn-lg btn-block' %>
+							</div>
 
-					<div class="col-md-6">
-					<%= link_to 'Sign in', '/sign_in', :class => 'btn btn-success btn-lg btn-block' %>
-					</div>
-				<br>
-				</center>
-			<% end %>
-		</div>
-	</div>
+							<div class="col-md-6">
+							<%= link_to 'Sign in', '/sign_in', :class => 'btn btn-success btn-lg btn-block' %>
+							</div>
+						<br>
+						</center>
+					<% end %>
+				</div>
+			</div>
 
-<center>
-<body>
-	<br>
-	<%= image_tag("scoreImage.jpg",:class => "img-rounded img-responsive",:alt => "rss feed") %>
+		<center>
+		<body>
+			<br>
+			<%= image_tag("scoreImage.jpg",:class => "img-rounded img-responsive",:alt => "rss feed") %>
 
 
-	<br>
+			<br>
 
-</body>
-</center>
+		</body>
+		</center>
+	
