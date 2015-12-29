@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   
+  resources :enter_scores
   root 'welcome#landing', as: :welcome
 
   resources :pages, only: [:new]
