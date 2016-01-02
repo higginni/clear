@@ -23,6 +23,7 @@
       <li style="color:grey"><span><%= current_user.email %></span></li>
       <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
     <% else %>
+      <!--Add a button for "about page" that scrolls down --> 
       <li><%= link_to 'Sign in', sign_in_path %></li>
     <% end %>
   </ul>
