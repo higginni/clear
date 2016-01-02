@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
-  
+   
+
   resources :enter_scores
   root 'welcome#landing', as: :welcome
 
@@ -13,7 +14,8 @@ end
 constraints Clearance::Constraints::SignedOut.new do
   root to: 'pages#index'
 end
-
+  
+# get 'landing#intro'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

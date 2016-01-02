@@ -16,12 +16,14 @@ ie - if(!notSignedIn)
 		show login sign up buttons
 	}
  -->
- 	
+ 	<section id="intro">
 			<div class = "container">
 				<div class="row">
 					<% if signed_out? %>
+					<!-- <li><%= link_to 'About', 'intro', :class => "page-scroll" %></li> -->
 						<center>
 							<div class="col-md-6">
+							
 							<%= link_to 'Sign up', '/sign_up', :class => 'btn btn-primary btn-lg btn-block' %>
 							</div>
 
@@ -33,15 +35,33 @@ ie - if(!notSignedIn)
 					<% end %>
 				</div>
 			</div>
+			<center>
+				<body>
+					<br>
+					<%= image_tag("scoreImage.jpg",:class => "img-rounded img-responsive",:alt => "rss feed") %>
+					<br>
+				</body>
+			</center>
+	</section>
+		
+	<section id="about">
+		<div class="container">
+            <div class="row">		
+				<div class="col-md-6">
+					<center>
+					<h1>vsdfvfs</h1>
+					<br><br><br><br><br><br><br><br><br><br><br>
+					<br><br><br><br><br><br><br><br><br><br><br>
+					<br><br><br><br><br><br><br><br><br><br><br>
+				</center>
+				</div>
 
-		<center>
-		<body>
-			<br>
-			<%= image_tag("scoreImage.jpg",:class => "img-rounded img-responsive",:alt => "rss feed") %>
-
-
-			<br>
-
-		</body>
-		</center>
+				<div class="col-md-6">
+					<center>
+					<h1>vsdfvfs</h1>
+				</center>
+				</div>
+			</div>
+		</div>
+	</section>
 	

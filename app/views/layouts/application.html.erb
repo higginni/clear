@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Scoreboard</title>
+  
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -26,8 +27,12 @@
       <li style="color:grey"><span><%= current_user.email %></span></li>
     <% else %>
       <!--Add a button for "about page" that scrolls down --> 
+       <li><%= link_to 'About Us', "#about" %></li>
       <li><%= link_to 'Sign in', sign_in_path %></li>
-    <% end %>
+      
+     
+
+      <% end %>
   </ul>
   </div>
 
@@ -42,7 +47,7 @@
 <!-- </div> -->
   <% end %>
 
-    <div id="navbar">
+   <!--  <div id="navbar">
       <% if signed_in? %>
         <ul class="nav navbar-nav pull-right ">
           <li><%= link_to 'Profile', new_page_path %></li>
@@ -54,7 +59,7 @@
           <li><%= link_to 'Enter a score', '/enter_scores/new' %></li>
         </ul>
     </div>
-  <% end %>
+  <% end %> -->
 
 
 
