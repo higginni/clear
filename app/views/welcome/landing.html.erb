@@ -17,9 +17,42 @@ ie - if(!notSignedIn)
 	}
  -->
  	<section id="intro">
-			<div class = "container">
-				<div class="row">
+			<!-- <div class = "container">
+				<div class="row"> -->
 					<% if signed_out? %>
+					<div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
+							      <div class="carousel-inner">
+							        <div class="img-responsive item active" style="background-image: url(scoreImage.jpg)">
+							          <div class="caption">
+							            <h1 class="animated fadeInRightBig">Welcome to</h1>
+							            <p class="animated fadeInRightBig">The Scoreboard</p>
+							            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
+							          </div>
+							        </div>
+							        <div class="item" style="background-image: url(scoreImage.jpg)">
+							        	
+							          <div class="caption">
+							            <h1 class="animated fadeInRightBig">Join the Revolution</h1>
+							            <p class="animated fadeInRightBig"></p>
+							            <a data-scroll class="btn btn-start animated fadeInUpBig" href="/sign_up">Sign Up</a>
+							          </div>
+							        </div>
+							        <div class="item" style="background-image: url(scoreImage.jpg)">
+									<%= image_tag("scoreImage.jpg",:class => "background-image b1 img-rounded img-responsive",:alt => "rss feed") %>
+							          <div class="caption">
+							            <h1 class="animated fadeInRightBig">hkhi</h1>
+							            <p class="animated fadeInRightBig"></p>
+							            <a data-scroll class="btn btn-start animated fadeInUpBig" href='/sign_in'>Sign In</a>
+							          </div>
+							        </div>
+							      </div>
+							      <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+							      <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
+
+							    </div>
+
+
+
 					<!-- <li><%= link_to 'About', 'intro', :class => "page-scroll" %></li> -->
 						<!-- <center>
 							<div class="col-md-6">
@@ -34,13 +67,11 @@ ie - if(!notSignedIn)
 						<%= image_tag("scoreImage.jpg",:class => "b1 img-rounded img-responsive",:alt => "rss feed") %>
 						</center> -->
 					<% end %>
-				</div>
-			</div>
+<!-- 				</div>
+			</div> -->
 			<center>
 				<body>
-					<br>
-						
-					<br>
+					
 				</body>
 			</center>
 	</section>
@@ -48,7 +79,7 @@ ie - if(!notSignedIn)
 		
 			<% if signed_out? %>
 				
-				<section id="about">
+<!-- 				<section id="about">
 					<div class="container">
 			            
 			            <div class="row">	
@@ -74,6 +105,6 @@ ie - if(!notSignedIn)
 							</div>
 						</div>
 					</div>
-				</section>
+				</section> -->
 			<% end %>
 		
