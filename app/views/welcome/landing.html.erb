@@ -4,6 +4,7 @@
 <!-- Try 
 
 	if(signed in == true)
+	{
 		Dont show these buttons
 
 	}
@@ -16,40 +17,40 @@ ie - if(!notSignedIn)
 		show login sign up buttons
 	}
  -->
- 	<section id="intro">
+
 			<!-- <div class = "container">
 				<div class="row"> -->
 					<% if signed_out? %>
 					<div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
 							      <div class="carousel-inner">
-							        <div class="img-responsive item active" style="background-image: url(scoreImage.jpg)">
-							          <div class="caption">
-							            <h1 class="animated fadeInRightBig">Welcome to</h1>
-							            <p class="animated fadeInRightBig">The Scoreboard</p>
-							            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
-							          </div>
-							        </div>
-							        <div class="item" style="background-image: url(scoreImage.jpg)">
-							        	
-							          <div class="caption">
-							            <h1 class="animated fadeInRightBig">Join the Revolution</h1>
-							            <p class="animated fadeInRightBig"></p>
-							            <a data-scroll class="btn btn-start animated fadeInUpBig" href="/sign_up">Sign Up</a>
-							          </div>
-							        </div>
-							        <div class="item" style="background-image: url(scoreImage.jpg)">
-									<%= image_tag("scoreImage.jpg",:class => "background-image b1 img-rounded img-responsive",:alt => "rss feed") %>
-							          <div class="caption">
-							            <h1 class="animated fadeInRightBig">hkhi</h1>
-							            <p class="animated fadeInRightBig"></p>
-							            <a data-scroll class="btn btn-start animated fadeInUpBig" href='/sign_in'>Sign In</a>
-							          </div>
-							        </div>
+								        <div class="img-responsive item active" style="background-image: url(scoreImage.jpg)">
+								          <div class="caption">
+								            <h1 class="animated fadeInRightBig">The Scoreboard</h1>
+								            <p class="animated fadeInRightBig"></p>
+								            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
+								          </div>
+								        </div>
+								        <div class="item" style="background-image: url(scoreImage.jpg)">
+								        	<%= image_tag("scoreImage.jpg",:class => "background-image img-rounded img-responsive",:alt => "rss feed") %>
+								          <div class="caption">
+								            <h1 class="animated fadeInRightBig">Join the Revolution</h1>
+								            <p class="animated fadeInRightBig"></p>
+								            <a data-scroll class="btn btn-start animated fadeInUpBig" href="/sign_up">Sign Up</a>
+								          </div>
+								        </div>
+								        <div class="item" style="background-image: url(scoreImage.jpg)">
+										<%= image_tag("scoreImage.jpg",:class => "background-image img-rounded img-responsive",:alt => "rss feed") %>
+								          <div class="caption">
+								            <h1 class="animated fadeInRightBig"></h1>
+								            <p class="animated fadeInRightBig"></p>
+								            <a data-scroll class="btn btn-start animated fadeInUpBig" href='/sign_in'>Sign In</a>
+								          </div>
+								        </div>
 							      </div>
 							      <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
 							      <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
 
-							    </div>
+					</div>
 
 
 
@@ -69,42 +70,8 @@ ie - if(!notSignedIn)
 					<% end %>
 <!-- 				</div>
 			</div> -->
-			<center>
-				<body>
-					
-				</body>
-			</center>
-	</section>
+			
 			
 		
-			<% if signed_out? %>
-				
-<!-- 				<section id="about">
-					<div class="container">
-			            
-			            <div class="row">	
-			            	<div class="col-md-12">
-			            		<center>
-			            			<h1>About Us</h1>
-			            		</center>
-						</div>
-			            <div class="row">		
-							<div class="col-md-6">
-								<center>
-								<h1>vsdfvfs</h1>
-								<br><br><br><br><br><br><br><br><br><br><br>
-								<br><br><br><br><br><br><br><br><br><br><br>
-								<br><br><br><br><br><br><br><br>
-							</center>
-							</div>
-
-							<div class="col-md-6">
-								<center>
-								<h1>vsdfvfs</h1>
-							</center>
-							</div>
-						</div>
-					</div>
-				</section> -->
-			<% end %>
+			
 		

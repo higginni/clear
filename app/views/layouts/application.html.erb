@@ -20,14 +20,15 @@
 
      <ul class="nav navbar-nav pull-right">
     <% if signed_in? %>
-     <li><%= link_to 'Profile', new_page_path, :class => 'nav navbar-nav pull-right btn active' %></li> 
+    <li><%= link_to 'Live Feed', '#', :class => 'nav navbar-nav pull-right' %></li> 
+     <li><%= link_to 'Profile', new_page_path, :class => 'nav navbar-nav pull-right' %></li> 
       <li><%= link_to 'Stats', new_page_path, :class => 'nav navbar-nav pull-right' %></li>
       <li><%= link_to 'Enter a score', '/enter_scores/new', :class => 'nav navbar-nav pull-right'  %></li>
       <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
       <li style="color:grey"><span><%= current_user.email %></span></li>
     <% else %>
       <!--Add a button for "about page" that scrolls down --> 
-       <li><%= link_to 'About Us', "#about" %></li>
+       
       <li><%= link_to 'Sign in', sign_in_path %></li>
       
      
