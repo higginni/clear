@@ -27,7 +27,7 @@
       <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
       <li style="color:grey"><span>Current:<%= current_user.email %></span></li>
     <% else %>
-      <!--Add a button for "about page" that scrolls down --> 
+      
       <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
@@ -38,13 +38,10 @@
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
       <li><%= link_to 'Sign in', sign_in_path %></li>
-      
-     
 
       <% end %>
   </ul>
   </div>
-
  
 </nav>
 
