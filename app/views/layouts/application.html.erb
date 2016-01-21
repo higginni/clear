@@ -24,8 +24,8 @@
         <li><%= link_to 'Profile', new_page_path, :class => 'nav navbar-nav pull-right' %></li> 
         <li><%= link_to 'Stats', new_page_path, :class => 'nav navbar-nav pull-right' %></li>
         <li><%= link_to 'Enter a score', '/pages/score', :class => 'nav navbar-nav pull-right'  %></li>
-      <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
-      <li style="color:grey"><span>Current:<%= current_user.email %></span></li>
+      <li><%= link_to 'Sign out', sign_out_path, method: :delete , :class => 'nav navbar-nav pull-right'%></li>
+      <!-- <li style="color:grey"><span>Current:<%= current_user.email %></span></li> -->
     <% else %>
       
       <li>
@@ -40,33 +40,32 @@
       <li><%= link_to 'Sign in', sign_in_path %></li>
 
       <% end %>
+      
+      
+  
   </ul>
   </div>
  
 </nav>
 
+      <% if signed_in? %>
+        <div class="container">
+          <div class= "row">
+            <div class="col-md-11">
+  
+            </div>
+            <div class="col-md-1"><span style="color:grey">Welcome:<%= current_user.email %></span>
+            </div>         
+          </div>
+        </div>
+      <% end %>
 <div class="container">
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>">
       <%= value %>
     </div>
-<!-- </div> -->
+
   <% end %>
-
-   <!--  <div id="navbar">
-      <% if signed_in? %>
-        <ul class="nav navbar-nav pull-right ">
-          <li><%= link_to 'Profile', new_page_path %></li>
-        </ul>
-        <ul class="nav navbar-nav pull-right">
-          <li><%= link_to 'Stats', new_page_path %></li>
-        </ul>
-        <ul class="nav navbar-nav pull-right">
-          <li><%= link_to 'Enter a score', '/enter_scores/new' %></li>
-        </ul>
-    </div>
-  <% end %> -->
-
 
 
   <%= yield %>
