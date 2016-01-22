@@ -1,6 +1,7 @@
 <div id="clearance" class="sign-up">
-  <h2><%= t(".title") %></h2>
-
+  <center>
+    <h2><%= t(".title") %></h2>
+  </center>
   <%= form_for @user do |form| %>
     <%= render partial: '/users/form', object: form %>
 
