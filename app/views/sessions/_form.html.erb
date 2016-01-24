@@ -2,7 +2,7 @@
 
 <%= form_for :session, url: session_path do |form| %>
   
-    <div class = "container-fluid jumbotron">
+    <div class = "container-fluid">
       <div class = "row">
         <div class="col-md-4">
             <div class="form-group">
@@ -24,8 +24,8 @@
         <div class="col-md-4">
               <div class="submit-field">
                 
-                  <%= form.submit %>
-                
+                  
+                  <%= form.submit "Submit", :class => "btn btn-primary"  %>
               
               </div>
         </div>
