@@ -1,4 +1,6 @@
-
+<div id="landing">
+	<div class = "b1">
+	
 			<% if signed_out? %>
 				<div class="page-header">
 						<center>
@@ -6,16 +8,16 @@
 						</center>
 							<!--  -->
 				</div>
-									<div class = "jumbotron">
-										<center>
-											<h4>Golf's First Social Media</h4>
-											<%= link_to "Sign-Up", '/sign_up' ,:class => "btn btn-info"%>
+				<div class="b1">
+				<center>
+					<h4>Golf's First Social Media</h4>
+					<%= link_to "Sign-Up", '/sign_up' ,:class => "btn btn-info"%>
 											
-										</center>
-									</div>
+				</center>
+				</div>
 
 					    <% else %>
-							<div class="page-header">
+						<div class="page-header">
 							<center>
 								<h1>The Scoreboard</h1>
 							</center>
@@ -24,9 +26,10 @@
 										<center>
 											<h4></h4>
 										</center>		
-									
+							
 					<% end %>
-
+	</div>
+</div>
 
 					
 			

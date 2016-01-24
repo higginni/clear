@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
   def score
   end
+ 
 
   before_action :require_login, only: [:new]
 

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-   
+# get "welcome/test" => "welcome#test"   
 get "pages/score" => "pages#score"
   resources :enter_scores
   root 'welcome#landing', as: :welcome

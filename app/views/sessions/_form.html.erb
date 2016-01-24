@@ -4,42 +4,31 @@
   
     <div class = "container-fluid jumbotron">
       <div class = "row">
-      <form class="form-inline">
         <div class="col-md-4">
             <div class="form-group">
-               <center> 
-              <%= form.label :email %>
-              <%= form.text_field :email, type: 'email' %>
-               </center> 
+               
+              <!--<%= form.label :email %>-->
+             
+              <%= form.text_field :email, type: 'email', :class => "form-control", :placeholder => "Email"%>
+              
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
-              <center> 
-              <%= form.label :password %>
-              <%= form.password_field :password %>
-            </center> 
+              
+              
+              <%= form.password_field :password , :class => "form-control", :placeholder => "Password"%>
+            
             </div>
         </div>
         <div class="col-md-4">
               <div class="submit-field">
-                <center>
+                
                   <%= form.submit %>
-                </center>
+                
               
               </div>
-
-                  <!-- <div class="other-links">
-                    <% if Clearance.configuration.allow_sign_up? %>
-                      <%= link_to t(".sign_up"), sign_up_path %>
-                    <% end %><br>
-                    <%= link_to t(".forgot_password"), new_password_path %>
-                  </div>
-                 -->
-
         </div>
-      
-      </form>
       </div>
     </div>
   
