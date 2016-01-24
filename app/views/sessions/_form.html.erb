@@ -1,23 +1,19 @@
-<!-- sign in page -->
+<!-- sign in/Sessions page -->
 
 <%= form_for :session, url: session_path do |form| %>
   
     <div class = "container-fluid">
-      <div class = "row">
+      <div class = "row jumbotron">
         <div class="col-md-4">
-            <div class="form-group">
-               
+            <div class="form-group">          
               <!--<%= form.label :email %>-->
-             
-              <%= form.text_field :email, type: 'email', :class => "form-control", :placeholder => "Email"%>
-              
+              <%= form.text_field :email, type: 'email', :class => "form-control",required: true, :placeholder => "Email"%>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
-              
-              
-              <%= form.password_field :password , :class => "form-control", :placeholder => "Password"%>
+                          
+              <%= form.password_field :password , :class => "form-control",required: true, :placeholder => "Password"%>
             
             </div>
         </div>
