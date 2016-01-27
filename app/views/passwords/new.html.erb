@@ -4,13 +4,22 @@
   <p><%= t(".description") %></p>
 
   <%= form_for :password, url: passwords_path do |form| %>
-        
-        <div class="text-field">     
-          <%= form.text_field :email, type: 'email', :class => "form-control",required: true, :placeholder => "Email"%>
+      <div class ="container"> 
+        <div class = "row"> 
+          <div class="col-md-4">
+            <div class="text-field">     
+              <%= form.text_field :email, type: 'email', :class => "form-control",required: true, :placeholder => "Email"%>
+              <br>
+              <div class="submit-field">
+                <%= form.submit "Submit", :class => "btn btn-primary" %>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     <br>
-    <div class="submit-field">
+    <!-- <div class="submit-field">
       <%= form.submit "Submit", :class => "btn btn-primary" %>
-    </div>
+    </div> -->
   <% end %>
 </div>
