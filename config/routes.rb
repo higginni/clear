@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :scores
 # get "welcome/test" => "welcome#test"   
 get "pages/score" => "pages#score"
   resources :enter_scores

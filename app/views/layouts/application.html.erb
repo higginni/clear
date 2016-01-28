@@ -23,7 +23,7 @@
         <li><%= link_to 'Live Feed', '#', :class => 'nav navbar-nav pull-right' %></li> 
         <li><%= link_to 'Profile', new_page_path, :class => 'nav navbar-nav pull-right' %></li> 
         <li><%= link_to 'Stats', new_page_path, :class => 'nav navbar-nav pull-right' %></li>
-        <li><%= link_to 'Enter a score', '/pages/score', :class => 'nav navbar-nav pull-right'  %></li>
+        <li><%= link_to 'Enter a score', '/scores/new', :class => 'nav navbar-nav pull-right'  %></li>
       <li><%= link_to 'Sign out', sign_out_path, method: :delete , :class => 'nav navbar-nav pull-right'%></li>
       <!-- <li style="color:grey"><span>Current:<%= current_user.email %></span></li> -->
     <% else %>

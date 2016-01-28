@@ -11,9 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151229170139) do
+ActiveRecord::Schema.define(version: 20160128172441) do
 
   create_table "enter_scores", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "scores", force: :cascade do |t|
+    t.integer  "strokes"
+    t.string   "course"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
