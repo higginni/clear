@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  get "scores/index" => "scores#index"
   resources :scores
 # get "welcome/test" => "welcome#test"   
 get "pages/score" => "pages#score"

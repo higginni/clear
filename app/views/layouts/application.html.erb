@@ -31,15 +31,14 @@
           <% if signed_in? %>
               <li><%= link_to 'Live Feed', '#', :class => 'nav navbar-nav ' %></li> 
               <li><%= link_to 'Profile', new_page_path, :class => 'nav navbar-nav ' %></li> 
-              <li><%= link_to 'Stats', new_page_path, :class => 'nav navbar-nav ' %></li>
+              <li><%= link_to 'Stats', '/scores/index', :class => 'nav navbar-nav ' %></li>
               <li><%= link_to 'Enter a score', '/scores/new', :class => 'nav navbar-nav '  %></li>
               <li><%= link_to 'Sign out', sign_out_path, method: :delete , :class => 'nav navbar-nav '%></li>
           <% else %>
-                    <li><a class="page-scroll" href="#about">About</a></li></li>
-                    <li><a class="page-scroll" href="#services">Services</a></li>
-                    <li><a class="page-scroll" href="#contact">Contact</a></li>
-                    <li><%= link_to 'Sign in', sign_in_path %></li>
-
+              <li><a class="page-scroll" href="#about">About</a></li></li>
+              <li><a class="page-scroll" href="#services">Services</a></li>
+              <li><a class="page-scroll" href="#contact">Contact</a></li>
+              <li><%= link_to 'Sign in', sign_in_path %></li>
       <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -61,9 +60,9 @@
       <!-- error message -->
       <div class="container">
         <% flash.each do |key, value| %>
-          <div class="alert alert-danger alert-dismissible" role="alert">
+          <!-- <div class="alert alert-danger alert-dismissible" role="alert"> -->
             <strong><%= value %></strong>
-          </div>
+          <!-- </div> -->
         <% end %>
   <%= yield %>
 
