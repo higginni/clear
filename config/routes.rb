@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get "scores/index" => "scores#index"
   get "pages/profile" => "pages#profile"
+  get "pages/leaderboard" => "pages#leaderboard"
   resources :scores
 # get "welcome/test" => "welcome#test"   
 get "pages/score" => "pages#score"

@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
           <% if signed_in? %>
-              <li><%= link_to 'Live Feed', '#', :class => 'nav navbar-nav ' %></li> 
+              <li><%= link_to 'Leaderboard', '/pages/leaderboard', :class => 'nav navbar-nav ' %></li> 
               <li><%= link_to 'Profile', '/pages/profile', :class => 'nav navbar-nav ' %></li> 
               <li><%= link_to 'Stats', '/scores/index', :class => 'nav navbar-nav ' %></li>
               <li><%= link_to 'Enter a score', '/scores/new', :class => 'nav navbar-nav '  %></li>
