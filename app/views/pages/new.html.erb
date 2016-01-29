@@ -6,19 +6,24 @@
 
 	<div class = "container">
 		<div class="row">
-			<div class="col-md-4 jumbotron">
-				<center><h2>Profile Picture</h2><center>
+			<div class="col-md-3 well well">
+				<%= image_tag 'logo.png',:title => 'show_group'  %>
+				<br><hr>
+				<%= link_to ' Edit','#', :class => 'glyphicon glyphicon-camera' %>
 			</div>
-			<div class="col-md-4 panel panel-info">
-				 <h2>Home Club</h2>
+			<div class="col-md-3 well well">
+				 <h2>Royal Co. Down</h2>
+				 <%= link_to ' Home Club ', '#', :class => 'glyphicon glyphicon-pencil' %>
 			</div>
-			<div class="col-md-4 bg-primary">
-				<h2>Handicap</h2>
+			<div class="col-md-3 well well">
+				<h2>Handicap: 12</h2>
+				<%= link_to ' Edit Handicap', '#', :class => 'glyphicon glyphicon-pencil' %>
+				<!--<%= link_to image_tag("images/edit45.png"), '#' %>-->
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-xs-3">
+			<!-- <div class="col-xs-3">
 				
 			</div>
 			<div class="col-xs-3">
@@ -31,6 +36,6 @@
 				<center>	
 				<%= link_to 'Edit Profile', '#', :class => 'btn btn-default' %>
 				</center>
-			</div>
+			</div> -->
 		</div>
 	</div>
