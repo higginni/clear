@@ -22,6 +22,9 @@ class ScoresController < ApplicationController
   # GET /scores/1/edit
   def edit
   end
+  # def average
+  #     User.average(:strokes)
+  #   end
 
   # POST /scores
   # POST /scores.json
@@ -73,4 +76,5 @@ class ScoresController < ApplicationController
     def score_params
       params.require(:score).permit(:strokes, :course)
     end
+
 end
