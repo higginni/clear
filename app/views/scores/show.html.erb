@@ -5,18 +5,36 @@
             <strong><%= value %></strong>
           </div>
     </div>
-
         <% end %>
-<hr>
-<p>
-  <strong>Strokes:</strong>
-  <%= @score.strokes %>
-</p>
 
-<p>
-  <strong>Course:</strong>
-  <%= @score.course %>
-</p>
+<div class="page-header">
+  <center>
+    <h2>Score Details</h2>
+  </center>       <!--  -->
+</div>
+<div class = "container-fluid">
+  <div class = "row">
+      <div class = "well well">
+          <p>
+          <strong>Updated at:</strong>
+            <%= @score.updated_at.strftime("%d %b. %Y") %>
+          <p>
+          <p>
+          <strong>Time:</strong>
+            <%= @score.updated_at.strftime("%H:%M") %>
+          <p>
+            <strong>Strokes:</strong>
+            <%= @score.strokes %>
+          </p>
 
-<%= link_to 'Edit', edit_score_path(@score) %> |
+          <p>
+            <strong>Course:</strong>
+            <%= @score.course %>
+          </p>
+      </div>
+  </div>
+  <%= link_to 'Edit', edit_score_path(@score) %> |
 <%= link_to 'Back', scores_path %>
+
+</div>
+

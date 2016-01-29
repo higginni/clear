@@ -6,13 +6,13 @@
   </center>       <!--  -->
 </div>
 
-
-
 <table>
   <thead>
     <tr>
       <th>Strokes</th>
       <th>Course</th>
+      <th>Created on:</th>
+      <th>Created at:</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,6 +22,8 @@
       <tr>
         <td><%= score.strokes %></td>
         <td><%= score.course %></td>
+        <td><%= score.created_at.strftime("%d %b. %Y")%></td>
+        <td><%= score.created_at.strftime("%H:%M")%></td>
         <td><%= link_to 'Show', score %></td>
         <td><%= link_to '', edit_score_path(score), :class => "glyphicon glyphicon-pencil"%></td>
         <td><%= link_to '', score, method: :delete, data: { confirm: 'Are you sure?' }, :class => "glyphicon glyphicon-trash"%></td>
