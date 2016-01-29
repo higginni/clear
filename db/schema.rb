@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20160128172441) do
   end
 
   create_table "scores", force: :cascade do |t|
-    t.integer  "strokes"
+    t.integer  "strokes", limit: 3
     t.string   "course"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
