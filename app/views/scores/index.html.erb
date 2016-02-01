@@ -21,6 +21,15 @@
                         </tr>
                   </thead>
 
+                  <!-- Rendering the Activity Name -->
+                  <% @scores.where(users_id: current_user.id).each do |scores| %>
+                      <h4><%= scores.strokes %></h4>
+                      <!-- Current activity_id = @act_id -->
+                      <% @act_id = scores.id %>
+                      <% end %>
+
+
+
                   <tbody>
                     <% @scores.each do |score| %>
                       <tr>
@@ -37,7 +46,7 @@
                     <% end %>
                   </tbody>
                 </table>
-                <%= link_to 'New Score', new_score_path, :class => "btn btn-info" %>
+                <%= link_to 'New Score', new_score_path(:user_id => current_user.id), :class => "btn btn-info" %>
                 <%= link_to 'Alter Stats', "#", :class => "btn btn-primary" %> 
                 <!-- Have this button to make the show,edit and delete button appear onclick  -->
               </div>

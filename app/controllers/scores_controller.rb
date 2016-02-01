@@ -5,6 +5,7 @@ class ScoresController < ApplicationController
   # GET /scores.json
   def index
       @scores = Score.all.reverse
+      @score_user_id = params[:user_id]
      # @scores = Score.order(strokes: :desc)
     # @articles = Article.order(total_points: :desc, goal_difference: :desc)
   end
