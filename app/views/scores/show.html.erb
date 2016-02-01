@@ -8,25 +8,35 @@
 </div>
 <div class = "container-fluid">
   <div class = "row">
-      <div class = "well well">
-          <p>
-          <strong>Created:</strong>
-            <%= @score.updated_at.strftime("%d %b. %Y") %>
-          <p>
-          <p>
-          <strong>Last Updated:</strong>
-            <%= @score.updated_at.strftime("%H:%M") %>
-          <p>
-            <strong>Strokes:</strong>
-            <%= @score.strokes %>
-          </p>
+      
+          <div class="col-md-4">
+            <div class = "well well">
+              <p>
+              <strong>Created:</strong>
+                <%= @score.updated_at.strftime("%d %b. %Y") %>
+              <p>
+              <p>
+              <strong>Last Updated:</strong>
+                <%= @score.updated_at.strftime("%H:%M") %>
+              <p>
+                <strong>Strokes:</strong>
+                <%= @score.strokes %>
+              </p>
 
-          <p>
-            <strong>Course:</strong>
-            <%= @score.course %>
-          </p>
-      </div>
+              <p>
+                <strong>Course:</strong>
+                <%= @score.course %>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+                <div class = "well well">
+                  <%= image_tag @score.image.url(:large) %>
+                </div>
+          </div>
+     
   </div>
+  <br>
   <%= link_to 'Edit', edit_score_path(@score) %> |
   <%= link_to 'Back', scores_path %>
 

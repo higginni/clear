@@ -1,4 +1,4 @@
-<%= form_for(@score) do |f| %>
+<%= form_for @score, html: { multipart: true } do |f| %>
   <% if @score.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@score.errors.count, "error") %> prohibited this score from being saved:</h2>
@@ -23,6 +23,12 @@
             <%= f.label :course %><br>
             <%= f.text_field :course, :class => "form-control",required: true, :placeholder => "Course" %>
           </div>
+        </div>
+        <div class="col-md-4">  
+          <!-- <div class="field"> -->
+            <%= f.label :image %><br>
+            <%= f.file_field :image %>
+          <!-- </div> -->
         </div>
       </div>
           <div class="submit-field">
