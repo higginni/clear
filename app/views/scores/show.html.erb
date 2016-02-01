@@ -6,10 +6,9 @@
     <h2>Score Details</h2>
   </center>       <!--  -->
 </div>
-<div class = "container-fluid">
-  <%= link_to 'Edit', edit_score_path(@score) %> |
-  <%= link_to 'Back', scores_path %>
-  <br>
+
+
+<div class = "container-fluid"> 
   <div class = "row">      
           <div class="col-md-4">
             <div class = "well well">
@@ -30,20 +29,29 @@
                 <strong>Course:</strong>
                 <%= @score.course %>
               </p>
+
+              <%= link_to 'Edit', edit_score_path(@score) %> |
+              <%= link_to 'Back', scores_path %>
             </div>
           </div>
           <div class="col-md-6">
-                <div class = "well well">
+                <div >
                 <center>  
-                  <%= image_tag @score.image.url(:large) %>
+                 <!--  <%= image_tag @score.image.url(:large) %> -->
+
+                    <% if @score.image.file? %>
+                      <%= image_tag @score.image.url(:medium) %>
+                    <% else %>
+                      
+                    <% end %>
+
                 </center>
                 </div>
           </div>
      
   </div>
   <br>
-  <%= link_to 'Edit', edit_score_path(@score) %> |
-  <%= link_to 'Back', scores_path %>
+  
 
 </div>
 

@@ -22,9 +22,9 @@ class ScoresController < ApplicationController
   # GET /scores/1/edit
   def edit
   end
-  def average
-      User.average("strokes")
-    end
+  # def average
+  #     User.average("strokes")
+  #   end
 
   # POST /scores
   # POST /scores.json
