@@ -4,7 +4,7 @@ class ScoresController < ApplicationController
   # GET /scores
   # GET /scores.json
   def index
-      @scores = Score.all
+      @scores = Score.all.reverse
      # @scores = Score.order(strokes: :desc)
     # @articles = Article.order(total_points: :desc, goal_difference: :desc)
   end
@@ -22,9 +22,9 @@ class ScoresController < ApplicationController
   # GET /scores/1/edit
   def edit
   end
-  # def average
-  #     User.average(:strokes)
-  #   end
+  def average
+      User.average("strokes")
+    end
 
   # POST /scores
   # POST /scores.json
