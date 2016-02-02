@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "welcome/about" => "welcome#about"
   get "scores/index" => "scores#index"
   get "pages/profile" => "pages#profile"
   get "pages/leaderboard" => "pages#leaderboard"
