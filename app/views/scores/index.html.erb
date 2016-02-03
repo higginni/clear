@@ -29,11 +29,11 @@
                         <td><%= score.created_at.strftime("%d %b. %Y")%></td>
                       
                          <!-- Make this appear on click of Alter scores button -->
-                      <span>
+                      <p>
                         <td><%= link_to ' Show', score %></td>
                         <td><%= link_to '', edit_score_path(score), :class => "glyphicon glyphicon-pencil"%></td>
                         <td><%= link_to '', score, method: :delete, data: { confirm: 'Are you sure?' }, :class => "glyphicon glyphicon-trash"%></td>
-                      </span>
+                      </p>
                       </tr> 
                     <% end %>
                   </tbody>
@@ -49,7 +49,8 @@
                  
                   <strong>Mean Value:</strong>
                    
-                         <%= @avg %>
+                         <%= @avg.round %>
+                   
                    <br>
                   
                
@@ -82,9 +83,9 @@
 
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script>
-        $("span").on('click', function() 
+        $("p").on('click', function() 
         {
-          $("span").hide();
+          $("p").hide();
           $(this).next().show();
         });
         </script>
