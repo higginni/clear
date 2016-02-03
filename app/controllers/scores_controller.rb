@@ -6,8 +6,9 @@ class ScoresController < ApplicationController
   def index
       @scores = Score.all.reverse
       @score_user_id = params[:user_id]
-     # @scores = Score.order(strokes: :desc)
-    # @articles = Article.order(total_points: :desc, goal_difference: :desc)
+      # @scores = Score.order(strokes: :desc)
+      # @articles = Article.order(total_points: :desc, goal_difference: :desc)
+      @avg = Score.average(:strokes)
   end
 
   # GET /scores/1
