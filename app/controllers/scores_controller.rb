@@ -4,12 +4,14 @@ class ScoresController < ApplicationController
   # GET /scores
   # GET /scores.json
   def index
-      @scores = Score.all.reverse
+      @scores = Score.limit(7).reverse
       @score_user_id = params[:user_id]
       # @scores = Score.order(strokes: :desc)
      
       @avg = Score.average(:strokes)
+
   end
+  # 
 
   # GET /scores/1
   # GET /scores/1.json
