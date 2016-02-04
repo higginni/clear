@@ -7,9 +7,10 @@ class ScoresController < ApplicationController
       @scores = Score.limit(7).reverse
       @score_user_id = params[:user_id]
       # @scores = Score.order(strokes: :desc)
-     
+      # Average of all scores recorded
       @avg = Score.average(:strokes)
-
+      # Confidence interval
+      
   end
   # 
 
