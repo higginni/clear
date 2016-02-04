@@ -4,13 +4,13 @@ class ScoresController < ApplicationController
   # GET /scores
   # GET /scores.json
   def index
-      @scores = Score.limit(7).reverse
+      @scores = Score.limit(7).reverse #BUg regarding the wrapping of the table data... Only shows 7, not most recent 7 scores
       @score_user_id = params[:user_id]
       # @scores = Score.order(strokes: :desc)
       # Average of all scores recorded
       @avg = Score.average(:strokes)
       # Confidence interval
-      
+
   end
   # 
 
