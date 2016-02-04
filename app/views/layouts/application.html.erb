@@ -32,7 +32,7 @@
           <% if signed_in? %>
               <li><%= link_to 'Leaderboard', '/pages/leaderboard', :class => 'nav navbar-nav ' %></li> 
               <li><%= link_to 'Profile', '/pages/profile', :class => 'nav navbar-nav ' %></li> 
-              <li><%= link_to 'Stats', '/scores/index', :class => 'nav navbar-nav ' %></li>
+              <li><%= link_to 'Performance', '/scores/index', :class => 'nav navbar-nav ' %></li>
               <li><%= link_to 'Enter a score', '/scores/new', :class => 'nav navbar-nav '  %></li>
               <li role="separator" class="divider"></li>
               <li><%= link_to 'Sign out', sign_out_path, method: :delete , :class => 'nav navbar-nav'%></li>
