@@ -14,11 +14,11 @@
             <div class = "well well">
               <p>
               <strong>Created:</strong>
-                <%= @score.updated_at.strftime("%d %b. %Y") %>
+                <%= @score.created_at.strftime("%d %b. %Y") %>
               </p>
               <p>
               <strong>Last Updated:</strong>
-                <%= @score.updated_at.strftime("%H:%M") %>
+                <%= @score.updated_at.strftime("%H:%M - %d %b. %Y") %>
               </p>
               <p>
                 <strong>Strokes:</strong>
@@ -42,9 +42,11 @@
                     <% if @score.image.file? %>
                       <%= image_tag @score.image.url(:medium) %>
                     <% else %>
-                       <p>
-                        Document your score with a picture of your card or even a picture from your round
-                       </p>
+                        <div class="col-md-8">
+                        <p class = "lead">
+                        Birdie the 3rd in Royal County Down or get through Amen Corner bogey free? Upload a picture to remember it. 
+                        </p> 
+                       </div>
                     <% end %>
 
                 </center>
