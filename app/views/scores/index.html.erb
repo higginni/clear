@@ -29,7 +29,7 @@
                       
                          <!-- Make this appear on click of Alter scores button -->
                       <p>
-                        <td><%= link_to ' Show', score %></td>
+                        <td><%= link_to '', score, :class => "glyphicon glyphicon-eye-open" %></td>
                         <td><%= link_to '', edit_score_path(score), :class => "glyphicon glyphicon-pencil"%></td>
                         <td><%= link_to '', score, method: :delete, data: { confirm: 'Are you sure?' }, :class => "glyphicon glyphicon-trash"%></td>
                       </p>
@@ -45,10 +45,14 @@
          
             <h3>Stats</h3>
                  
-                  
+                        
+                         
+                      
+                       
+                      
                           <p>    
-                          <strong>Mean Value:</strong>                
-                            <%= @avg.round %> strokes
+                          <strong>Mean Value:</strong>          <!-- strokes unless @score.nil?       -->
+                            <%= @avg.round %> 
                           <br>
                           <strong>Confidence Interval:</strong>
                             <!-- Confidence interval variable -->
@@ -56,6 +60,8 @@
                           <strong>Standard Deviation:</strong>
                             <!-- Standard Deviation variable -->
                           </p>
+                     
+                        
                   
                   <button class = "btn btn-default btn-sm">Generate Stats</button>
                   
