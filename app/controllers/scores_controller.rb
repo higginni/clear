@@ -5,7 +5,7 @@ class ScoresController < ApplicationController
   # GET /scores.json
   def index                                         #Need FIFO Queue format for table...
       
-      @scores = Score.order("created_at").limit(7) #BUg regarding the wrapping of the table data... Only shows 7, not most recent 7 scores
+      @scores = Score.order("created_at DESC").take(7) #BUg regarding the wrapping of the table data... Only shows 7, not most recent 7 scores
       @score_user_id = params[:user_id]
       # Average of all scores recorded
       @avg = Score.average(:strokes)
