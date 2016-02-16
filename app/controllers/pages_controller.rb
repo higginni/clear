@@ -5,6 +5,8 @@ class PagesController < ApplicationController
   end
   def score
   end
+  def leaderboard
+  end
  
 
   before_action :require_login, only: [:new]
