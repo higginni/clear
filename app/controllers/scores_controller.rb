@@ -7,18 +7,32 @@ class ScoresController < ApplicationController
       
       @scores = Score.order("created_at DESC").take(7) #BUg regarding the wrapping of the table data... Only shows 7, not most recent 7 scores
       @score_user_id = params[:user_id]
+      
       # Average of all scores recorded
       if(:strokes == nil)
         @avg = 0
       
       else
-        @avg = Score.average(:strokes)
+        @avg = Score.average(:strokes).round
         # @avg.round(@avg)
         
       
       # return @avg 
       end
       # Confidence interval
+      
+      @var_Score = Score.last(3).count
+      # Standard Deviation
+      # @stDev = 
+      @variance = (@var_Score - Score.average(:strokes))
+
+      # @sample = Score.order("created_at DESC").take(7)
+      # @sample = Score.size
+      @sample = 8-1
+
+      
+
+
 
   end
   # 
