@@ -21,14 +21,14 @@ class ScoresController < ApplicationController
       end
       # Confidence interval
       
-      @var_Score = Score.last(3).count
+      @sample = Score.last(7).count
       # Standard Deviation
       # @stDev = 
-      @variance = (@var_Score - Score.average(:strokes))
+      @variance = ( - Score.average(:strokes))
 
       # @sample = Score.order("created_at DESC").take(7)
       # @sample = Score.size
-      @sample = 8-1
+      # @sample = 8-1
 
       
 
