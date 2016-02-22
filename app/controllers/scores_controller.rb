@@ -13,7 +13,7 @@ class ScoresController < ApplicationController
         @avg = 0
       
       else
-        @avg = Score.average(:strokes).round
+        @avg = Score.average(:strokes)
         # @avg.round(@avg)
         
       
@@ -21,14 +21,14 @@ class ScoresController < ApplicationController
       end
       # Confidence interval
       
-      @sample = Score.last(7).count
+      # @sample = Score.last(8).count
       # Standard Deviation
       # @stDev = 
-      @variance = ( - Score.average(:strokes))
+      # @variance = (@john - @avg)
 
       # @sample = Score.order("created_at DESC").take(7)
       # @sample = Score.size
-      # @sample = 8-1
+      @sample = 8-1
 
       
 
