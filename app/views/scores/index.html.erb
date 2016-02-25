@@ -29,9 +29,9 @@
                       
                          <!-- glyphicon glyphicon-eye-open-->
                       <p>
-                        <td><%= link_to '', score, :class => "glyphicon glyphicon-eye-open" %></td>
-                        <td><%= link_to '', edit_score_path(score), :class => "glyphicon glyphicon-pencil"%></td>
-                        <td><%= link_to '', score, method: :delete, data: { confirm: 'Are you sure?' }, :class => "glyphicon glyphicon-trash"%></td>
+                        <td><%= link_to '', score, :class => "btn btn-primary glyphicon glyphicon-eye-open" %></td>
+                        <!-- <td><%= link_to '', edit_score_path(score), :class => "glyphicon glyphicon-pencil"%></td> -->
+                        <td><%= link_to '', score, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-primary glyphicon glyphicon-trash"%></td>
                       </p>
                       </tr> 
                     <% end %>
@@ -93,7 +93,7 @@
 </div>
  
 
-
+<!-- stats script -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
