@@ -29,8 +29,8 @@ gem 'paperclip', '~> 4.3', '>= 4.3.2'
 gem 'clearance', '~> 1.11'
 # Use Unicorn as the app server
 # gem 'unicorn'
-# gem 'groupdate'
-gem 'lazy_high_charts'
+# gem 'groupdate'gem 'google_charts', '~> 1.2'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
