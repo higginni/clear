@@ -1,6 +1,7 @@
 class ScoresController < ApplicationController
   before_action :set_score, only: [:show, :edit, :update, :destroy]
   before_action :authorize, except: [:show, :index]
+  
   # GET /scores
   # GET /scores.json
   def index                                         #Need LIFO stack format for table...

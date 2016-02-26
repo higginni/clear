@@ -30,7 +30,8 @@ gem 'clearance', '~> 1.11'
 # Use Unicorn as the app server
 # gem 'unicorn'
 # gem 'groupdate'gem 'google_charts', '~> 1.2'
-
+# gem 'browser', '~> 1.1'
+gem 'browser', '~> 1.0', '>= 1.0.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
