@@ -142,14 +142,16 @@ function drawBasic() {
     <div class ="container">
       <div class ="row"> 
         <div class="col-md-12">
-         
+         <% if browser.mobile? %>
+                 <p>gjfy</p>
+          <% else %>
                  <div class="panel panel-default">
                     <div class="panel-heading">
                       <h3> Graph </h3>
                     </div>  
                         <div id="chart_div"></div>
                   </div>
-          
+          <%  end %>
           
         
              </div>
