@@ -22,7 +22,7 @@
       </button>
         <div class="navbar-header">
           
-          <%= link_to 'Scoreboard', root_path, class: 'navbar-brand' %>
+          <%= link_to 'Scoreboard', "/", class: 'navbar-brand' %>
         </div>
     </div>
 
@@ -37,7 +37,7 @@
               <li><%= link_to 'Sign out', sign_out_path, method: :delete , :class => 'nav navbar-nav'%></li>
           <% else %>
               <li><a class="page-scroll" href="welcome/about">About</a></li>
-              <li><a class="page-scroll" href="#services">Recommendations</a></li>
+              <li><a class="page-scroll" href="#Recommendations">Recommendations</a></li>
               <li><a class="page-scroll" href="#contact">Contact</a></li>
               <li><%= link_to 'Sign in', sign_in_path %></li>
       <% end %>
