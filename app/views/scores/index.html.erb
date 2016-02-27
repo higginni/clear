@@ -15,7 +15,7 @@
                             </div>
                             
                             <div class="panel-body">
-                               <h5>See your last 3 scores below. Add a score by clicking 'new score', view and edit the details by clicking the buttons below.   </h5>
+                               <h5><strong>See your last 3 scores below. Add a score by clicking 'new score', view and edit the details by clicking the buttons below. </strong>  </h5>
                             </div>
                                   
                                   <thead>
@@ -58,22 +58,22 @@
                     <h3>Stats</h3>
                     </div>
                     <div class="panel-body">
-                           <h5>Click the button below to have your statistics generated.</h5>
+                           <h5><strong>Click the button below to have your statistics generated.</strong></h5>
 
                             <p>    
-                          <strong>Mean Value:</strong>          
+                          Mean Value:
                             <%= @avg %> 
                           <br>
-                          <strong>Confidence Interval:</strong>
+                          Confidence Interval:
                             
                           <br>
-                          <strong>Standard Deviation:</strong>
+                          Standard Deviation:
                             
                             <br>
-                          <strong>Sample Size:</strong>
+                          Sample Size:
                             <%= @sample %>
                             <br>
-                            <strong>Variance</strong>
+                            Variance:
                             <%= @variance %>
                           </p>    
                     </div>
@@ -121,8 +121,8 @@ function drawBasic() {
       ]);
 
       var options = {
-        width: 800,
-        height: 500,
+        // width: 800,
+        // height: 500,
         hAxis: {
           title: 'Date'
         },
@@ -142,16 +142,16 @@ function drawBasic() {
     <div class ="container">
       <div class ="row"> 
         <div class="col-md-12">
-         <% if browser.mobile? %>
+        <!--  <% if browser.mobile? %>
                  <p>gjfy</p>
-          <% else %>
+          <% else %> <%  end %>-->
                  <div class="panel panel-default">
                     <div class="panel-heading">
                       <h3> Graph </h3>
                     </div>  
                         <div id="chart_div"></div>
                   </div>
-          <%  end %>
+          
           
         
              </div>
