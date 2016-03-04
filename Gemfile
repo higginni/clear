@@ -28,7 +28,7 @@ gem 'paperclip', '~> 4.3', '>= 4.3.2'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'clearance', '~> 1.11'
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'execjs', '~> 2.6'
 # gem 'groupdate'gem 'google_charts', '~> 1.2'
 # gem 'browser', '~> 1.1'
 gem 'browser', '~> 1.0', '>= 1.0.1'
