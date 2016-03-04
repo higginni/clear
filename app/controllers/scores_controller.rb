@@ -5,10 +5,11 @@ class ScoresController < ApplicationController
   # GET /scores
   # GET /scores.json
   def index                                         #Need LIFO stack format for table...
-      
+      @statsD = User.all.extend(DescriptiveStatistics)
       @scores = Score.order("created_at DESC").take(3) #BUg regarding the wrapping of the table data... Only shows 7, not most recent 7 scores
       @score_user_id = params[:user_id]
-      
+      # @var = Score.mean(:strokes)
+      # @mean_age = Score.mean(&:strokes)
       # Average of all scores recorded
       if(:strokes == nil)
         @avg = 0
@@ -20,15 +21,7 @@ class ScoresController < ApplicationController
       
       # return @avg 
       end
-      # Confidence interval
       
-      # @sample = Score.last(8).count
-      # Standard Deviation
-      # @stDev = 
-      # @variance = (@john - @avg)
-
-      # @sample = Score.order("created_at DESC").take(7)
-      # @sample = Score.size
       @sample = 8-1
 
       

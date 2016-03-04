@@ -66,6 +66,7 @@ GEM
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.0)
     debug_inspector (0.0.2)
+    descriptive_statistics (2.4.0)
     email_validator (1.6.0)
       activemodel
     erubis (2.7.0)
@@ -171,6 +172,7 @@ DEPENDENCIES
   byebug
   clearance (~> 1.11)
   coffee-rails (~> 4.1.0)
+  descriptive_statistics (~> 2.4.0)
   execjs (~> 2.6)
   jbuilder (~> 2.0)
   jquery-rails
