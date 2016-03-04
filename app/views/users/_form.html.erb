@@ -2,28 +2,22 @@
 
 <div class = "container-fluid jumbotron">
 	<div class = "row">
-		<div class="col-md-4">
+		<div class="col-md-3">
 				<div class="form-group">
 					  
 					  <%= form.text_field :email, type: 'email', :class => "form-control",required: true, :placeholder => "Email"%>
 					  <!-- <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"> -->
 				</div>
 		</div>
-		<!-- <div class="col-md-3">
-				<div class="form-group">
-				  	
-				  	<%= form.password_field :name, :class => "form-control",required: true, :placeholder =>"Name" %>
-				  	
-				</div>
-		</div> -->
-		<div class="col-md-4">
+		 <!--  -->
+		<div class="col-md-3">
 				<div class="form-group">
 				  	
 				  	<%= form.password_field :password, :class => "form-control",required: true, :placeholder =>"Password" %>
 				  	
 				</div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-3">
 				<div class="submit-field">
       			  	<%= form.submit "Submit", :class => "btn btn-primary"  %>
     			</div>
