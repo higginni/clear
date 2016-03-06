@@ -67,14 +67,14 @@
                           Confidence Interval:
                             
                           <br>
-                          Standard Deviation:
+                          Standard Deviation: <%= @stDev %>
                             
                             <br>
                           Sample Size:
                             <%= @sample %>
                             <br>
-                            Variance:
-                            <%= @var %>
+                            <!-- Variance: -->
+                            Variance:  <%= @variance %>
                           </p>    
 
                     </div>
@@ -98,12 +98,7 @@
 <br>
 
 
-<!-- Statistical Analysis -->
-<!-- <div class ="container">
-    <div class ="row"> 
-        <div class="col-md-6">
-          <h3> Graph </h3> -->
-             <!--Load the AJAX API-->
+
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
 

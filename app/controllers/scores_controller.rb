@@ -1,15 +1,21 @@
 class ScoresController < ApplicationController
   before_action :set_score, only: [:show, :edit, :update, :destroy]
   before_action :authorize, except: [:show, :index]
-  
-  # GET /scores
+  # expose(:scores)
+  # expose(:scores_descriptive_statistics) {User.all.extend(DescriptiveStatistics)}
+  # # GET /scores
   # GET /scores.json
   def index                                         #Need LIFO stack format for table...
-      statsD = User.all.extend(DescriptiveStatistics)
+      # statsD = User.all.extend(DescriptiveStatistics)
       @scores = Score.order("created_at DESC").take(5) #BUg regarding the wrapping of the table data... Only shows 7, not most recent 7 scores
       @score_user_id = params[:user_id]
-      @var = Score.variance(&:strokes)
-      
+      # scores = Score.all.extend(DescriptiveStatistics)
+      # @variance = scores.variance(&:strokes) 
+                                             
+      stat = Score.all.extend(DescriptiveStatistics)
+      @variance = stat.variance(&:strokes) 
+      @stDev = stat.standard_deviation(&:strokes) 
+
       if(:strokes == nil)
         @avg = 0
       
