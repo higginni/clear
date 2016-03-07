@@ -10,7 +10,7 @@
 <body>
 
 
-<nav class="navbar navbar-inverse">   <!-- navbar-fixed-top... Not needed-removes constant -->
+<nav class="navbar navbar-inverse navbar-fixed-bottom">   <!-- navbar-fixed-top... Not needed-removes constant -->
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -36,7 +36,7 @@
               <li><%= link_to 'Performance', '/scores/index', :class => 'nav navbar-nav ' %></li>
               <li><%= link_to 'Sign out', sign_out_path, method: :delete , :class => 'nav navbar-nav'%></li>
           <% else %>
-              <li><a class="page-scroll" href="welcome/about">About</a></li>
+              <li><a class="page-scroll"  href="welcome/about">About</a></li>
               <li><a class="page-scroll" href="#Recommendations">Recommendations</a></li>
               <li><a class="page-scroll" href="#contact">Contact</a></li>
               <li><%= link_to 'Sign in', sign_in_path %></li>
@@ -45,7 +45,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
+<br>
       <% if signed_in? %>
         <div class="container">
           <div class= "row">
