@@ -13,6 +13,9 @@ class ScoresController < ApplicationController
       stat = Score.all.extend(DescriptiveStatistics)
       @variance = stat.variance(&:strokes) 
       @stDev = stat.standard_deviation(&:strokes) 
+      # Median
+      @median = stat.median(&:strokes)
+      # 
       @map = stat.map(&:strokes) 
       if(:strokes == nil)
         @avg = 0
@@ -22,10 +25,6 @@ class ScoresController < ApplicationController
       end
       
       @sample = 8-1
-
-      
-
-
 
   end
   # 
