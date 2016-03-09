@@ -4,42 +4,47 @@
 <%= form_for @contact, :url => contacts_path, :html => {:class => 'formtastic'} do |f| %>
 <div class ="container">
   <div class ="row">
+     <div class="col-md-5"> 
       <% if ContactUs.require_name %>
         <div class='string required' id='contact_us_contact_name_input'>
-          <%= f.label :name, (t('.name') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
+          <br>
           <%= f.text_field :name, :class => "form-control", :placeholder => "Name" %>
           <% if f.object.errors[:name].present? %>
-            <p class='inline-error'><%= f.object.errors[:name].join(' and ') %></p>
+            <div class="alert alert-warning alert-dismissible" role="alert"><p class='inline-error'><%= f.object.errors[:name].join(' and ') %> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></p></div>
           <% end %>
         </div>
       <% end %>
       <div class='string required' id='contact_us_contact_email_input'>
-        <%= f.label :email, (t('.email') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
+        <br>
         <%= f.text_field :email, :class => "form-control", :placeholder => "Email"  %>
         <% if f.object.errors[:email].present? %>
-          <p class='inline-error'><%= f.object.errors[:email].join(' and ') %></p>
+          <div class="alert alert-warning alert-dismissible" role="alert"><p class='inline-error'><%= f.object.errors[:email].join(' and ') %> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></p></div>
         <% end %>
       </div>
       <% if ContactUs.require_subject %>
         <div class='string required' id='contact_us_contact_subject_input'>
-          <%= f.label :subject, (t('.subject') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
+        <br>
           <%= f.text_field :subject, :class => "form-control", :placeholder => "Subject"  %>
           <% if f.object.errors[:subject].present? %>
-            <p class='inline-error'><%= f.object.errors[:subject].join(' and ') %></p>
+            <div class="alert alert-warning alert-dismissible" role="alert"><p class='inline-error'><%= f.object.errors[:subject].join(' and ') %> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></p></div>
           <% end %>
         </div>
       <% end %>
       <div class='text required' id='contact_us_contact_message_input'>
-        <%= f.label :message, (t('.message') + content_tag(:abbr, '*', :class => 'required')).html_safe %>
-        <%= f.text_area :message , :class => "form-control",:rows => "3", :placeholder => "Message" %>
+        <br>
+        <%= f.text_area :message , :class => "form-control",:rows => "5", :placeholder => "Message" %>
         <% if f.object.errors[:message].present? %>
-          <p class='inline-error'><%= f.object.errors[:message].join(' and ') %></p>
+          <div class="alert alert-warning alert-dismissible" role="alert"><p class='inline-error'><%= f.object.errors[:message].join(' and ') %> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></p></div>
         <% end %>
       </div>
       <br>
       <div class='commit'>
-        <%= f.submit :submit, :class => 'submit create', :title => t('.submit') %>
+        <%= f.submit :Submit, :class => 'btn btn-primary', :title => t('.submit') %>
       </div>
     <% end %>
+    </div>
   </div>
 </div>
+
+
+
