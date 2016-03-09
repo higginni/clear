@@ -38,7 +38,7 @@
           <% else %>
               <li><a class="page-scroll"  href="welcome/about">About</a></li>
               <li><a class="page-scroll" href="#Recommendations">Recommendations</a></li>
-              <li><a class="page-scroll" href="#contact">Contact</a></li>
+              <li><%= link_to 'Contact Us', '/contacts/new', :class => 'nav navbar-nav '  %></li>
               <li><%= link_to 'Sign in', sign_in_path %></li>
       <% end %>
       </ul>
