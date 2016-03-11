@@ -90,7 +90,7 @@
                       
 
                         
-                  
+                  <%= @scores_donut %>
                  
                 
               
@@ -140,18 +140,35 @@ function drawBasic() {
   <body>
     <div class ="container">
       <div class ="row"> 
-        <div class="col-md-12">
+        <div class="col-md-6">
        
                  <div class="panel panel-default">
                     <div class="panel-heading">
                       <h3> Graph </h3>
                     </div>  
+                        <h5 class = "lead"> Here are your scores in a graph layout. </h5>
                         <div id="chart_div"></div>
                   </div>
           
           
         
              </div>
+
+            <div class="col-md-6">
+       
+                 <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      <h3> Donut </h3>
+                    </div>  
+                        <h5 class = "lead"> Your Total number of Scores is <%= @scores_donut %>
+                  </h5>
+                        
+                  </div>
+          
+          
+        
+             </div>
+
         </div>
     </div>
   </body>

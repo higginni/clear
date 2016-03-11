@@ -5,17 +5,17 @@ class ScoresController < ApplicationController
   # expose(:scores_descriptive_statistics) {User.all.extend(DescriptiveStatistics)}
   # # GET /scores
   # GET /scores.json
-  def index                                         #Need LIFO stack format for table...
-      
+  def index                                        
+      @scores_donut = Score.count 
       @scores = Score.order("created_at DESC").take(5) 
       @score_user_id = params[:user_id]
 
+      
+      # Stats Work 
       stat = Score.all.extend(DescriptiveStatistics)
       @variance = stat.variance(&:strokes) 
       @stDev = stat.standard_deviation(&:strokes) 
-      # Median
       @median = stat.median(&:strokes)
-      # 
       @map = stat.map(&:strokes) 
       if(:strokes == nil)
         @avg = 0

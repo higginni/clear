@@ -63,12 +63,14 @@
 
       <!-- error message -->
       <div class="container">
-        <% flash.each do |key, value| %>
-          
-            <strong><%= value %></strong>
-          
-        <% end %>
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
+
   <%= yield %>
+</div>
 
 </body>
 </html>
