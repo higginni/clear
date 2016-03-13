@@ -26,11 +26,11 @@ class ScoresController < ApplicationController
       
       @sample = 8-1
 
-  end
-  # 
 
-  # GET /scores/1
-  # GET /scores/1.json
+
+
+  end
+
   def show
   end
 

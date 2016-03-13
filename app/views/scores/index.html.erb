@@ -20,7 +20,6 @@
                             <div class="panel-heading">
                               <h1>Scores</h1>
                             </div>
-                            
                             <div class="panel-body">
                                <h2><small>See your last 2 scores below. Add a score by clicking 'new score', view and edit the details by clicking the buttons below.</small> <%= link_to 'New Score', new_score_path(:user_id => current_user.id), :class => "btn btn-info" %></h2>
                                
@@ -67,13 +66,10 @@
       <!-- <div class="modal-header"> -->
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         
-      <div class="modal-body">
+      <!-- <div class="modal-body">
         
-      </div>
-      <div class="modal-footer">
-        
-        
-      </div>
+      </div> -->
+      
     </div>
   </div>
 </center>
@@ -132,7 +128,6 @@
 
 
   
-
   <body>
     <div class ="container">
       <div class ="row"> 
@@ -144,7 +139,7 @@
                     </div>  
                         <h5 class = "lead"> Here are your scores in a graph layout. </h5>
                         <%= content_tag :div, "", id: "scores_chart", data: {scores: @scores} %>
-                        <center><div id="myfirstchart" style="height: 250px; width: 60%" ></div></center>
+                        <div id="myfirstchart" style="height: 250px; width: 70%" ></div>
                   </div>       
              </div>
             <div class="col-md-6">
@@ -161,6 +156,7 @@
         </div>
     </div>
   </body>
+
 
 
  
@@ -208,11 +204,20 @@ new Morris.Line({
   // Chart data records -- each entry in this array corresponds to a point on
   // the chart.
   data: [
-    { year: '2008', score: 90 },
-    { year: '2009', score: 70 },
-    { year: '2010', score: 100 },
-    { year: '2011', score: 100 },
-    { year: '2012', score: 120 }
+    { year: '2000', score: 90 },
+    { year: '2001', score: 70 },
+    { year: '2002', score: 100 },
+    { year: '2003', score: 100 },
+    { year: '2004', score: 120 },
+    { year: '2005', score: 90 },
+    { year: '2006', score: 70 },
+    { year: '2007', score: 100 },
+    { year: '2008', score: 100 },
+    { year: '2009', score: 120 },
+    { year: '2009', score: 120 },
+    { year: '2009', score: 130 },
+    { year: '2009', score: 140 },
+    { year: '2009', score: 150 },
   ],
   // The name of the data record attribute that contains x-scores.
   xkey: 'year',
