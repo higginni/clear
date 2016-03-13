@@ -17,6 +17,7 @@ class ScoresController < ApplicationController
       @stDev = stat.standard_deviation(&:strokes) 
       @median = stat.median(&:strokes)
       @map = stat.map(&:strokes) 
+      @range = stat.range(&:strokes)
       if(:strokes == nil)
         @avg = 0
       else

@@ -86,31 +86,56 @@
                            <h5 class = "lead">Click the button below to have your statistics generated.</h5>
 
                         <p>   
-                          Map:
-                            <%= @map %>
+                          Scores:
+                            <strong><%= @map %></strong>
   
                           </p>
                           <p>
+                            Range:  
+                            <% if @range == nil %>
+                            0
+                            <% else %>
+                              <strong><%= @range.round %></strong> (Difference between best score and worst score)
+                            <% end %>
+                          </p>
+                          <p>
                           Mean Value:
-                            <%= @avg %>
-
+                            <% if @avg == nil %> 
+                            0
+                            <% else %>
+                              <strong><%= @avg.round %></strong> (Sum total of all scores, divided by total number of scores)
+                            <% end %>
                           </p>  
                           <p>
                           Median: 
-                            <%= @median %>
+                            <% if @median == nil %>
+                            0
+                            <% else %>
+                              <strong><%= @median.round %></strong>
+                            <% end %>
+                            
                           </p>
                            <p>
                           Confidence Interval:
-
+                          
                           </p>
                           <p>
                           Standard Deviation:
-                            <%= @stDev %>
+                            <% if @stDev == nil %>
+                            0
+                            <% else %>
+                              <strong><%= @stDev.round %></strong>
+                            <% end %>
                           </p>
                           <p>
                           Variance:  
-                            <%= @variance %>
-                          </p>
+                            <% if @variance == nil %>
+                            0
+                            <% else %>
+                              <strong><%= @variance.round %></strong>
+                            <% end %>
+                            </p>
+                            
                           
                           
                             
@@ -130,28 +155,16 @@
   <body>
     <div class ="container">
       <div class ="row"> 
-        <div class="col-md-11">
-       
-                 <div class="panel panel-warning">
+        <div class="col-md-11">    
+                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                      <h3> Graph </h3>
+                      <h1> Graph </h1>
                     </div>  
-                        <h5 class = "lead"> Here are your scores in a graph layout. </h5>
+                        <h5 class = "lead">  Here are your scores in a graph layout. </h5>
                         <%= content_tag :div, "", id: "scores_chart", data: {scores: @scores} %>
                         <div id="myfirstchart" style="height: 250px; width: 100%" ></div>
                   </div>       
              </div>
-            <!-- <div class="col-md-6">
-       
-                 <div class="panel panel-primary">
-                    <div class="panel-heading">
-                      <h3> Donut </h3>
-                    </div>  
-                        <h5 class = "lead"> Your Total number of Scores is <%= @scores_donut %>
-                  </h5>
-                        
-                  </div>        
-             </div> -->
         </div>
     </div>
   </body>
@@ -209,7 +222,6 @@ new Morris.Area({
     { year: '2003', score: 100 },
     { year: '2004', score: 120 },
     { year: '2005', score: 90 },
-    { year: '2006', score: 70 },
     { year: '2007', score: 100 },
     { year: '2008', score: 100 },
     { year: '2009', score: 120 },
@@ -218,6 +230,7 @@ new Morris.Area({
     { year: '2012', score: 140 },
     { year: '2013', score: 150 },
   ],
+  
   // The name of the data record attribute that contains x-scores.
   xkey: 'year',
   // A list of names of data record attributes that contain y-scores.
