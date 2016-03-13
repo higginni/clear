@@ -61,9 +61,8 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<center>  
     <div class="modal-content">
-      <!-- <div class="modal-header"> -->
+      <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         
       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -72,7 +71,7 @@
       
     </div>
   </div>
-</center>
+</div>
 </div>
 
 
@@ -139,7 +138,7 @@
                     </div>  
                         <h5 class = "lead"> Here are your scores in a graph layout. </h5>
                         <%= content_tag :div, "", id: "scores_chart", data: {scores: @scores} %>
-                        <div id="myfirstchart" style="height: 250px; width: 70%" ></div>
+                        <div id="myfirstchart" style="height: 250px; width: 100%" ></div>
                   </div>       
              </div>
             <!-- <div class="col-md-6">
@@ -198,7 +197,7 @@ $(document).ready(function(){
 // });
 
 
-new Morris.Line({
+new Morris.Area({
   // ID of the element in which to draw the chart.
   element: 'myfirstchart',
   // Chart data records -- each entry in this array corresponds to a point on
@@ -225,7 +224,8 @@ new Morris.Line({
   ykeys: ['score'],
   // Labels for the ykeys -- will be displayed when you hover over the
   // chart.
-  labels: ['Score']
+  labels: ['Score'],
+  resize: true
 });
 </script>
 
