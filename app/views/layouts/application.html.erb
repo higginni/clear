@@ -10,7 +10,7 @@
 <body>
 
 
-<nav class="navbar navbar-inverse navbar-static-top">   <!-- navbar-fixed-top... Not needed-removes constant -->
+<nav class="navbar navbar-inverse navbar-fixed-top">   <!-- navbar-fixed-top... Not needed-removes constant -->
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -25,6 +25,7 @@
           <%= link_to 'Scoreboard', "/", class: 'navbar-brand' %>
         </div>
     </div>
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -48,12 +49,12 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<br>
+<br><br><br><br>
       <% if signed_in? %>
         <div class="container">
           <div class= "row">
             <div class="col-md-11">
-  
+        
             </div>
             <div class="col-md-1"><span style="color:grey">Welcome: <%= current_user.email %></span>
             </div>         
