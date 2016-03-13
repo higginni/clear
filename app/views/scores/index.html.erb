@@ -21,7 +21,7 @@
                               <h1>Scores</h1>
                             </div>
                             <div class="panel-body">
-                               <h2><small>See your last 2 scores below. Add a score by clicking 'new score', view and edit the details by clicking the buttons below.</small> <%= link_to 'New Score', new_score_path(:user_id => current_user.id), :class => "btn btn-info" %></h2>
+                               <h5 class = "lead">See your last 2 scores below. Add a score by clicking 'new score', view and edit the details by clicking the buttons below.</h5> <%= link_to 'New Score', new_score_path(:user_id => current_user.id), :class => "btn btn-info" %></h2>
                                
                               
                             </div>
@@ -84,7 +84,7 @@
                     </div>
                     <div class="panel-body">
                            <h5 class = "lead">Click the button below to have your statistics generated.</h5>
-
+<hr>
                         <p>   
                           Scores:
                             <strong><%= @map %></strong>
@@ -111,7 +111,7 @@
                             <% if @median == nil %>
                             0
                             <% else %>
-                              <strong><%= @median.round %></strong>
+                              <strong><%= @median.round %></strong> (Measure of central tendancy. 50% of scores above, 50% below)
                             <% end %>
                             
                           </p>
@@ -124,7 +124,7 @@
                             <% if @stDev == nil %>
                             0
                             <% else %>
-                              <strong><%= @stDev.round %></strong>
+                              <strong><%= @stDev.round %></strong> (Measure of how likely scores will differ from the mean.)
                             <% end %>
                           </p>
                           <p>
@@ -159,10 +159,12 @@
                  <div class="panel panel-primary">
                     <div class="panel-heading">
                       <h1> Graph </h1>
-                    </div>  
-                        <h5 class = "lead">  Here are your scores in a graph layout. </h5>
-                        <%= content_tag :div, "", id: "scores_chart", data: {scores: @scores} %>
-                        <div id="myfirstchart" style="height: 250px; width: 100%" ></div>
+                    </div> 
+                    <div class="panel-body">
+                          <h5 class = "lead">  Here are your scores in a graph layout. </h5>
+                          <%= content_tag :div, "", id: "scores_chart", data: {scores: @scores} %>
+                          <div id="myfirstchart" style="height: 250px; width: 100%" ></div>
+                    </div>
                   </div>       
              </div>
         </div>
