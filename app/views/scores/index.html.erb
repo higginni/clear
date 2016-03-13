@@ -40,7 +40,7 @@
                                               <td><%= score.strokes %></td>
                                               <td><%= score.created_at.strftime("%d %b. %Y")%></td>
                                               <td><%= link_to '  ', score, {:class => "btn btn-primary glyphicon glyphicon-eye-open" , 'data-toggle' => 'modal','data-target' =>'#myModal'}%></td> 
-                                              <td><%= link_to '  ', score, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-xs glyphicon glyphicon-trash"%></td>
+                                              <td><%= link_to '  ', score, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger glyphicon glyphicon-trash"%></td>
                                           
                                             </tr> 
                                           <% end %>
@@ -54,7 +54,7 @@
               
         </div>
        
-<!-- Button trigger modal -->
+
 
 
 <!-- Modal -->
@@ -66,9 +66,9 @@
       <!-- <div class="modal-header"> -->
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         
-      <!-- <div class="modal-body">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         
-      </div> -->
+      
       
     </div>
   </div>
@@ -131,7 +131,7 @@
   <body>
     <div class ="container">
       <div class ="row"> 
-        <div class="col-md-6">
+        <div class="col-md-11">
        
                  <div class="panel panel-warning">
                     <div class="panel-heading">
@@ -142,7 +142,7 @@
                         <div id="myfirstchart" style="height: 250px; width: 70%" ></div>
                   </div>       
              </div>
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
        
                  <div class="panel panel-primary">
                     <div class="panel-heading">
@@ -152,7 +152,7 @@
                   </h5>
                         
                   </div>        
-             </div>
+             </div> -->
         </div>
     </div>
   </body>
@@ -214,10 +214,10 @@ new Morris.Line({
     { year: '2007', score: 100 },
     { year: '2008', score: 100 },
     { year: '2009', score: 120 },
-    { year: '2009', score: 120 },
-    { year: '2009', score: 130 },
-    { year: '2009', score: 140 },
-    { year: '2009', score: 150 },
+    { year: '2010', score: 120 },
+    { year: '2011', score: 130 },
+    { year: '2012', score: 140 },
+    { year: '2013', score: 150 },
   ],
   // The name of the data record attribute that contains x-scores.
   xkey: 'year',

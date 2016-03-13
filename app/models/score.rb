@@ -5,7 +5,7 @@ class Score < ActiveRecord::Base
 
   	belongs_to :user
 
-  	# validates_numericality_of :strokes, :only_integer => true, :greater_than_or_equal_to => 59
+  	validates_numericality_of :strokes, :only_integer => true, :greater_than_or_equal_to => 59
 
   	
 end
