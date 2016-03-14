@@ -14,7 +14,9 @@ class ScoresController < ApplicationController
       # Stats Work 
       stat = Score.all.extend(DescriptiveStatistics)
       @variance = stat.variance(&:strokes) 
+      
       @stDev = stat.standard_deviation(&:strokes) 
+      
       @median = stat.median(&:strokes)
       @map = stat.map(&:strokes) 
       @range = stat.range(&:strokes)
