@@ -21,8 +21,7 @@ class ScoresController < ApplicationController
       if(:strokes == nil)
         @avg = 0
       else
-        @avg = Score.average(:strokes)
-        
+        @avg = Score.average(:strokes)   
       end
       
       @sample = 8-1
