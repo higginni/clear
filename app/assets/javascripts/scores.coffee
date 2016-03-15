@@ -10,4 +10,4 @@ jQuery ->
       xkey: 'created_at'
       ykeys: ['strokes']
       labels: ['Scores']
-      preUnits: '$'
+      
