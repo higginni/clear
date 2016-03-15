@@ -5,31 +5,38 @@ class ScoresController < ApplicationController
   # expose(:scores_descriptive_statistics) {User.all.extend(DescriptiveStatistics)}
   # # GET /scores
   # GET /scores.json
-  def index                                        
-      @scores_donut = Score.count 
-      @scores = Score.order("created_at DESC").take(5) 
-      @score_user_id = params[:user_id]
+  def index  
 
-      
-      # Stats Work 
-      stat = Score.all.extend(DescriptiveStatistics)
-      @variance = stat.variance(&:strokes) 
-      
-      @stDev = stat.standard_deviation(&:strokes) 
-      
-      @median = stat.median(&:strokes)
-      @map = stat.map(&:strokes) 
-      @range = stat.range(&:strokes)
-      if(:strokes == nil)
-        @avg = 0
-      else
-        @avg = Score.average(:strokes)   
-      end
-      
-      @sample = 8-1
+    respond_to do |format|
+      format.html { 
+        @scores_donut = Score.count 
+        @scores = Score.order("created_at DESC").take(5) 
+        @score_user_id = params[:user_id]
 
-
-
+        
+        # Stats Work 
+        stat = Score.all.extend(DescriptiveStatistics)
+        @variance = stat.variance(&:strokes) 
+        
+        @stDev = stat.standard_deviation(&:strokes) 
+        
+        @median = stat.median(&:strokes)
+        @map = stat.map(&:strokes) 
+        @range = stat.range(&:strokes)
+        if(:strokes == nil)
+          @avg = 0
+        else
+          @avg = Score.average(:strokes)   
+        end
+        
+        @sample = 8-1
+      }
+      format.json { 
+        scores = current_user.scores
+        # scores = Score.last(10)
+        render :json => scores
+      }
+    end
 
   end
 
@@ -52,6 +59,7 @@ class ScoresController < ApplicationController
   # POST /scores.json
   def create
     @score = Score.new(score_params)
+    @score.user_id = current_user.id
 
     respond_to do |format|
       if @score.save

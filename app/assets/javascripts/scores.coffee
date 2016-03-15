@@ -3,10 +3,11 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 jQuery ->
-  Morris.Line
-    element: 'scores_chart'
-    data: $('#scores_chart').data('scores')
-    xkey: 'created_at'
-    ykeys: ['strokes']
-    labels: [Scores]
-    preUnits: '$'
+  $.get '/scores/index.json', (data) ->  
+    Morris.Line
+      element: $('#myfirstchart')
+      data: data
+      xkey: 'created_at'
+      ykeys: ['strokes']
+      labels: ['Scores']
+      preUnits: '$'
