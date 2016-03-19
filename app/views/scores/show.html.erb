@@ -1,4 +1,4 @@
-<!-- <p class"alert alert-info "id="notice"><%= notice %></p> -->
+<!-- <p class="alert alert-info "id="notice"><%= notice %></p> -->
 
 <!-- 
 <div class="page-header">
@@ -7,12 +7,12 @@
   </center>       
 </div>
  -->
-
+<center>
 <div class="row">
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
        <% if @score.image.file? %>
-                      <%= image_tag @score.image.url(:medium) %>
+                      <%= image_tag @score.image.url(:large) %>
         <% else %>
                       <div>
                           <p class = "lead">
@@ -27,13 +27,7 @@
       <div class="caption">
         <h3>Details</h3>
         <p>
-              <strong>Created:</strong>
-                <%= @score.created_at.strftime("%d %b. %Y") %>
-              </p>
-              <p>
-              <strong>Last Updated:</strong>
-                <%= @score.updated_at.strftime("%H:%M - %d %b. %Y") %>
-              </p>
+             
               <p>
                 <strong>Strokes:</strong>
                 <%= @score.strokes %>
@@ -43,10 +37,18 @@
                 <strong>Course:</strong>
                 <%= @score.course %>
               </p>
+               <strong>Created:</strong>
+                <%= @score.created_at.strftime("%d %b. %Y") %>
+              </p>
+              <p>
+              <strong>Last Updated:</strong>
+                <%= @score.updated_at.strftime("%H:%M - %d %b. %Y") %>
+              </p>
         <p><%= link_to 'Edit', edit_score_path(@score) %> |
               <%= link_to 'Performance', scores_path %></p>
       </div>
     </div>
   </div>
 </div>
+</center>
 
