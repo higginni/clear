@@ -10,4 +10,14 @@ jQuery ->
       xkey: 'created_at'
       ykeys: ['strokes']
       labels: ['Scores']
+
+
+jQuery ->
+  $.get '/scores/index.json', (data) ->  
+    Morris.Bar
+      element: $('#mysecondchart')
+      data: data
+      xkey: 'created_at'
+      ykeys: ['strokes']
+      labels: ['Scores']
       
