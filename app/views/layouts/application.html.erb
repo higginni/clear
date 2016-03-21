@@ -33,9 +33,9 @@
           <% if signed_in? %>
              <!--  <li><%= link_to 'Leaderboard', '/pages/leaderboard', :class => 'nav navbar-nav ' %></li>  -->
              <!-- <li><%= link_to 'Profile', '/pages/profile', :class => 'nav navbar-nav ' %></li>  -->
-             <li><%= link_to 'Contact Us', '/contacts/new', :class => ""  %></li> 
-              <li><%= link_to 'Enter a score', '/scores/new'  %></li>
-              <li><%= link_to 'Performance', '/scores/index' %></li>
+             <li><%= link_to 'Contact Us', '/contacts/new', :class => ""  %></li>    <!-- class ="active" -->
+              <li ><%= link_to 'Enter a score', '/scores/new'  %></li>
+              <li ><%= link_to 'Performance', '/scores/index' %></li>
               <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
 
               
