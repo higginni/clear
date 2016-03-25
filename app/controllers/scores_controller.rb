@@ -16,6 +16,7 @@ class ScoresController < ApplicationController
         
         # Stats Work 
         stat = Score.all.extend(DescriptiveStatistics)
+
         @variance = stat.variance(&:strokes) 
         
         @stDev = stat.standard_deviation(&:strokes) 
@@ -27,9 +28,9 @@ class ScoresController < ApplicationController
           @avg = 0
         else
           @avg = Score.average(:strokes)   
-        end
-        
+        end     
         @sample = 8-1
+        
       }
       format.json { 
         scores = current_user.scores

@@ -9,7 +9,7 @@ jQuery ->
       data: data
       xkey: 'created_at'
       ykeys: ['strokes']
-      labels: ['Scores']
+      labels: ['Score']
 
 
 jQuery ->
@@ -19,5 +19,5 @@ jQuery ->
       data: data
       xkey: 'created_at'
       ykeys: ['strokes']
-      labels: ['Scores']
+      labels: ['Score']
       
