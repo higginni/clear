@@ -2,14 +2,17 @@
 	
 	
 			<% if signed_out? %>
-				<div class="page-header">
+				<!-- <div class="page-header">
 						<center>
 							<h1>The Scoreboard</h1>
 						</center>
-							<!--  -->
-				</div>
+							
+				</div> -->
 				<div>
 					<center>
+						
+						<%= image_tag("Logo_Header.png", :alt => "rss feed", :class => "img-responsive") %>
+						<hr>
 						<p class= "lead">Golf is the only sport where you can play against yourself. So why not keep track of how well you’re competing! </p>
 						<br>
 						<%= link_to "Sign-Up", '/sign_up' ,:class => "btn-lg btn-info"%>
@@ -20,14 +23,14 @@
 
 				</div>
 					    <% else %>
-						<div class="page-header">
+						
 							<center>
-								<h1>The Scoreboard</h1>
+								<%= image_tag("Logo_Header.png", :alt => "rss feed", :class => "img-responsive") %>
 							</center>
-						</div>
-					
+						
+						<hr>
 					<div>
-
+					
   							<!-- Nav tabs -->
 						  <ul class="nav nav-tabs" role="tablist">
 						    <li role="presentation" class="active"><a href="#score" aria-controls="score" role="tab" data-toggle="tab">Enter A Score</a></li>
