@@ -13,10 +13,8 @@
 
 ActiveRecord::Schema.define(version: 20160304001008) do
 
-  create_table "enter_scores", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "scores", force: :cascade do |t|
     t.integer  "strokes"
@@ -30,7 +28,7 @@ ActiveRecord::Schema.define(version: 20160304001008) do
     t.integer  "user_id"
   end
 
-  add_index "scores", ["user_id"], name: "index_scores_on_user_id"
+  add_index "scores", ["user_id"], name: "index_scores_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.datetime "created_at",                     null: false
@@ -39,14 +37,11 @@ ActiveRecord::Schema.define(version: 20160304001008) do
     t.string   "encrypted_password", limit: 128, null: false
     t.string   "confirmation_token", limit: 128
     t.string   "remember_token",     limit: 128, null: false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
     t.string   "name"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email"
-  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
+  add_index "users", ["email"], name: "index_users_on_email", using: :btree
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
 
+  add_foreign_key "scores", "users"
 end
