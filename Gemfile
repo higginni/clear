@@ -31,6 +31,7 @@ gem 'searchkick'
 gem 'clearance', '~> 1.11'
 # Use Unicorn as the app server
 gem 'execjs', '~> 2.6'
+gem 'groupdate'
 # gem 'groupdate'gem 'google_charts', '~> 1.2'
 # gem 'browser', '~> 1.1'
 gem 'browser', '~> 1.0', '>= 1.0.1'
