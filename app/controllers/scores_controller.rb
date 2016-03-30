@@ -9,13 +9,12 @@ class ScoresController < ApplicationController
 
     respond_to do |format|
       format.html { 
-        @scores_donut = Score.count 
-        @scores = Score.order("created_at DESC").take(5) 
+        @scores = current_user.scores.order("created_at DESC").take(5) 
         @score_user_id = params[:user_id]
 
         
         # Stats Work 
-        stat = Score.all.extend(DescriptiveStatistics)
+        stat = current_user.scores.all.extend(DescriptiveStatistics)
 
         @variance = stat.variance(&:strokes) 
         
@@ -27,7 +26,7 @@ class ScoresController < ApplicationController
         if(:strokes == nil)
           @avg = 0
         else
-          @avg = Score.average(:strokes)   
+          @avg = current_user.scores.average(:strokes)   
         end     
         @sample = 8-1
         
