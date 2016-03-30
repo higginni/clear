@@ -19,8 +19,11 @@ end
 constraints Clearance::Constraints::SignedOut.new do
   root to: 'pages#index'
 end
+
+get 'scores_path', to: 'scores#index', as: 'scores_path'
+get 'new_score_', to: 'scores#new', as: 'new_score_'
+
   
-# get 'landing#intro'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

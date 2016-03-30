@@ -42,7 +42,7 @@
               <%= link_to 'Enter A Score', '/scores/new', :class => ""  %>
             </li> 
             <% if controller.controller_name == "scores" %> <li class="scroll active"> <% else %> <li class="scroll"> <% end %>
-              <%= link_to 'Performance', '/scores/index', :class => ""  %>
+              <%= link_to 'Performance', scores_path, :class => ""  %>
             </li> 
             <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
             
