@@ -12,6 +12,8 @@ class ScoresController < ApplicationController
         @scores = current_user.scores.order("created_at DESC").take(5) 
         @score_user_id = params[:user_id]
 
+        @scores = Score.order("created_at DESC").take(5) 
+
         
         # Stats Work 
         stat = current_user.scores.all.extend(DescriptiveStatistics)
