@@ -48,6 +48,7 @@ GEM
     browser (1.1.0)
     builder (3.2.2)
     byebug (8.2.2)
+    chartkick (1.4.2)
     clearance (1.12.1)
       bcrypt
       email_validator (~> 1.4)
@@ -198,6 +199,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   browser (~> 1.0, >= 1.0.1)
   byebug
+  chartkick
   clearance (~> 1.11)
   coffee-rails (~> 4.1.0)
   contact_us (~> 1.0.1)
