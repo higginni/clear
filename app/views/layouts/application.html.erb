@@ -48,13 +48,13 @@
           
           <% else %>
               
-             <% if controller.controller_name == "welcome" %> <li class="scroll active"> <% else %> <li class="scroll"> <% end %>
+              <li> 
               <%= link_to 'About Us', '/welcome/about' %>
             </li>
-             <% if controller.controller_name == "contacts" %> <li class="scroll active"> <% else %> <li class="scroll"> <% end %>
+             <li> 
               <%= link_to 'Contact Us', '/contacts/new'  %>
             </li>
-            <% if controller.controller_name == "pages" %> <li class="scroll active"> <% else %> <li class="scroll"> <% end %>
+            <li>
               <%= link_to 'Sign in', sign_in_path %>
             </li>
 
