@@ -34,16 +34,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
           <% if signed_in? %>
+
+            <li><%= link_to 'Contact Us', '/contacts/new', :class => ""  %></li>
+            <li><%= link_to 'Performance', scores_path, :class => ""  %></li>
+            <li><%= link_to 'Enter A Score', '/scores/new', :class => ""  %></li>
             
-              <% if controller.controller_name == "contacts" %> <li class="scroll active"> <% else %> <li class="scroll"> <% end %>
-              <%= link_to 'Contact Us', '/contacts/new', :class => ""  %>
-            </li> 
-            <% if controller.controller_name == "scores" %> <li class="scroll active"> <% else %> <li class="scroll"> <% end %>
-              <%= link_to 'Enter A Score', '/scores/new', :class => ""  %>
-            </li> 
-            <% if controller.controller_name == "scores" %> <li class="scroll active"> <% else %> <li class="scroll"> <% end %>
-              <%= link_to 'Performance', scores_path, :class => ""  %>
-            </li> 
             <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
             
 
