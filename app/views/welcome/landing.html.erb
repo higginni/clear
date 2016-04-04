@@ -79,7 +79,8 @@ $(document).ready(function(){
 						<br>
 						<%= link_to "Sign-Up", '/sign_up' ,:class => "btn btn-lg btn-info"%>
 						<br><br>
-						<a href="#myModal" class="btn btn-lg btn-primary" data-toggle="modal">Find out more</a>
+						<%= link_to "Find Out More", '#myModal', {:class => "btn btn-lg btn-primary", 'data-target' =>'#myModal', 'data-toggle' => "modal"}%>
+						<!-- <a href="#myModal" class="btn btn-lg btn-primary" data-toggle="modal">Find out more</a> -->
 							
 					</center>										
 				</div>
