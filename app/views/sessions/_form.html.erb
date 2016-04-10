@@ -1,7 +1,8 @@
 <!-- sign in/Sessions page -->
+<!-- users returning to the application -->
 
 <%= form_for :session, url: session_path do |form| %>
-  
+    <!-- fields users will fill to re enter the site -->
     <div class = "container-fluid">
       <div class = "row jumbotron">
         <div class="col-md-4">
@@ -29,6 +30,7 @@
                     <div class="col-md-12">
                       <center> 
                         <div class="other-links">
+                          <!-- clearance handling sessions to allow sign in -->
                           <% if Clearance.configuration.allow_sign_up? %>
                             <%= link_to t(".sign_up"), sign_up_path %> |  
                           <% end %>

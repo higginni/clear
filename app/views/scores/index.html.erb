@@ -6,7 +6,7 @@
 
   <!--  <meta http-equiv="refresh" content="60" > -->    <!-- Auto-refresh --> 
 
-
+<!-- page where stats, scores and graphs are shown -->
 <div class="page-header">
   <center>
     <h1>Performance Analysis <small>View and add scores, statistics and graphs. </small></h1>
@@ -26,7 +26,7 @@
                                
                               
                             </div>
-                                  
+                                  <!-- scores table -->
                                    <thead>
                                         <tr>
                                           <th>Strokes:</th>
@@ -52,7 +52,7 @@
         </div>
        
 
-
+        <!-- As seen in the controller, the index method handles the logic, the view displays the components that the user understands -->
         <div class ="col-md-6">                         
                <div class="panel panel-success">
                     <div class="panel-heading">
@@ -136,7 +136,7 @@
     <div>
 
               <br>
-              <!-- Tab panes -->
+              <!-- scores displayed as graphs -->
            
                   <div class ="container">
                     <div class ="row">
@@ -149,7 +149,7 @@
                               <div class="panel-body">
                                     
                                     <h5 class = "lead">  Here are your scores in a bar chart layout. </h5> 
-                                     
+                                     <!-- id calling the scores.coffee file to display data  -->
                                       <div id="mysecondchart" style="height: 250px; width: 100%" ></div>
                               </div>
                           </div> 
@@ -168,7 +168,7 @@
                               </div> 
                               <div class="panel-body">
                                     <h5 class = "lead">  Here are your scores in a line graph layout. </h5>
-                                    
+                                    <!-- id calling the scores.coffee file to display data  -->
                                     <div id="myfirstchart" style="height: 250px; width: 100%" ></div>
                               </div>
                         </div>     
@@ -210,7 +210,7 @@
 
 
 
-<!-- stats script -->
+<!-- stats javascript to display the stats after the click -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -232,7 +232,7 @@ $(document).ready(function(){
 </script>
 
 
-<!-- Modal -->
+<!-- Modal for show score in the scoreboard -->
 <center>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">

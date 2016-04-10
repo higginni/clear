@@ -11,12 +11,13 @@
 </head>
 <body>
 
-
+<!-- Navigation bar -->
 <nav class="navbar navbar-inverse navbar-fixed-top">   <!-- navbar-fixed-top... Not needed-removes constant -->
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <!-- burger icon that appears on mobile devices -->
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -30,10 +31,10 @@
     </div>
 
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- links for the nav bar  -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-          <% if signed_in? %>
+          <% if signed_in? %> <!-- If the user is signed in , these links appear-->
 
             <li><%= link_to 'Contact Us', '/contacts/new', :class => ""  %></li>
             <li><%= link_to 'Performance', scores_path, :class => ""  %></li>
@@ -42,7 +43,7 @@
             <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
             
        
-          <% else %>
+          <% else %> <!-- If the user is not signed in, these buttons will appear -->
               
              <!--  <li> 
               <%= link_to 'About Us', '/welcome/about' %>
@@ -68,11 +69,12 @@
   </div><!-- /.container-fluid -->
 </nav>
 <br><br><br><br>
+
       <% if signed_in? %>
         <div class="container">
           <div class= "row">
             <div class="col-md-11">
-        
+            <!-- ensure the user is aware that they are signed in by displaying the email address -->
             </div>
             <div class="col-md-1" style ="color:black">Welcome:<span style="color:grey"> <u><%= current_user.email %></u></span>
             </div>         

@@ -1,5 +1,8 @@
+
+<!-- allows multiple scores to be inserted -->
 <%= form_for @score, html: { multipart: true } do |f| %>
   <% if @score.errors.any? %>
+  <!-- if scores are invalid, as the logic dictated by the model shows, the error message is shown in the views -->
     <div id="error_explanation">
       <div class="alert alert-danger" role="alert"><h4><%= pluralize(@score.errors.count, "error") %> prohibited this score from being saved:</h4></div>
 
@@ -10,6 +13,7 @@
       </ul>
     </div>
   <% end %>
+  <!-- fields for entering a new score, displayed here, logic handled in scores controller as part of MVC framework -->
     <div class ="container jumbotron">
       <div class ="row">
         <div class="col-md-4">
