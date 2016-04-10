@@ -2,6 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+# Taking in data in order to draw it on the Graphs
+
 jQuery ->
   $.get '/scores/index.json', (data) ->  
     Morris.Line

@@ -6,10 +6,10 @@ class ScoresController < ApplicationController
   # # GET /scores
   # GET /scores.json
   def index  
-
+  # Taking scores and building as an API   
     respond_to do |format|
       format.html { 
-        
+        # Display current users scores in the order of created at descending from most recent. Taking the last 5 scores
         @scores = current_user.scores.order("created_at DESC").take(5) 
         
         @score_user_id = params[:user_id]
@@ -24,6 +24,7 @@ class ScoresController < ApplicationController
         @median = stat.median(&:strokes)
         @map = stat.map(&:strokes) 
         @range = stat.range(&:strokes)
+        # error handling in case strokes is empty - new user.
         if(:strokes == nil)
           @avg = 0
         else
@@ -34,7 +35,7 @@ class ScoresController < ApplicationController
       }
       format.json { 
         scores = current_user.scores
-        # scores = Score.last(10)
+        # 
         render :json => scores
       }
     end
@@ -45,6 +46,7 @@ class ScoresController < ApplicationController
   end
 
   # GET /scores/new
+  # setting new score
   def new
     @score = Score.new
   end
@@ -52,12 +54,11 @@ class ScoresController < ApplicationController
   # GET /scores/1/edit
   def edit
   end
-  # def average
-  #     User.average("strokes")
-  #   end
+ 
 
   # POST /scores
   # POST /scores.json
+  # create scores
   def create
     @score = Score.new(score_params)
     @score.user_id = current_user.id
@@ -75,6 +76,7 @@ class ScoresController < ApplicationController
 
   # PATCH/PUT /scores/1
   # PATCH/PUT /scores/1.json
+  # updating scores
   def update
     respond_to do |format|
       if @score.update(score_params)
@@ -89,6 +91,7 @@ class ScoresController < ApplicationController
 
   # DELETE /scores/1
   # DELETE /scores/1.json
+  # deleting scores
   def destroy
     @score.destroy
     respond_to do |format|
