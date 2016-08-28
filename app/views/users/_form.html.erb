@@ -2,34 +2,19 @@
 
 <div class = "container-fluid jumbotron">
 	<div class = "row">
-		<div class="col-md-4">
-				<div class="form-group">
-					  
-					  <%= form.text_field :email, type: 'email', :class => "form-control",required: true, :placeholder => "Email"%>
-					  <br>
-					  
-				</div>
+		<div class="col-md-2">
+				
 		</div>
 		 <!--  -->
-		<div class="col-md-4">
+		<div class="col-md-8">
 				<div class="form-group">
-				  	
+				  	<%= form.text_field :email, type: 'email', :class => "form-control", required: true, :placeholder => "Email"%>
 				  	<%= form.password_field :password, :class => "form-control",required: true, :placeholder =>"Password" %>
-				  	
+				  	<br>				
+      			<%= form.submit "Sign Up", :class => "btn btn-block btn-primary"  %>
+    				
 				</div>
 		</div>
-<!-- <div class = "container-fluid jumbotron"> -->
-	<!-- <div class = "row">  -->
-		 <div class="col-md-4">
-				<div class="submit-field">
-					<!-- submit the current details  -->
-      			  	<%= form.submit "Sign Up", :class => "btn btn-block btn-primary"  %>
-    		</div>
-		</div> 
-	<!-- </div> -->
-<!-- </div> -->
-
 	</div>
 </div>
 
-<!--<%= form.label :email %>
