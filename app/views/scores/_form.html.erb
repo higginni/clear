@@ -14,31 +14,37 @@
     </div>
   <% end %>
   <!-- fields for entering a new score, displayed here, logic handled in scores controller as part of MVC framework -->
-    <div class ="container jumbotron">
+    <!-- <div class ="container jumbotron"> -->
       <div class ="row">
-        <div class="col-md-4">
-          <div class="field">
-            <%= f.label :strokes %><br>
-            <%= f.number_field :strokes , :class => "form-control",required: true, :placeholder => "Strokes"%>
-          </div>
-        </div>
-        <div class="col-md-4">  
-          <div class="field">
-            <%= f.label :course %><br>
-            <%= f.text_field :course, :class => "form-control",required: true, :placeholder => "Course" %>
-          </div>
-        </div>
-        <!--  -->
+        <div class="col-md-2"></div> 
+         <div class="col-md-8"> 
+          
+                <div class="field">
+                  <%= f.number_field :strokes , :class => "form-control",required: true, :placeholder => "Score"%>
+                </div>
+              
+                <div class="field">
+                  <%= f.text_field :course, :class => "form-control",required: true, :placeholder => "Course" %>
+                </div>
 
-        <div class="col-md-4">  
-          <!-- <div class="field"> -->
-            <%= f.label :Upload_an_Image %><br>
-            <%= f.file_field :image %>
-          <!-- </div> -->
-        </div>
-      </div>
-          <div class="submit-field">
-            <br> <%= f.submit "Enter Score", :class => "btn btn-primary"%>
-          </div>
+                
+                <br>
+                <div class="col-md-4">  
+                 <div class="field"> 
+                  <%= f.label :Upload_an_Image %><br>
+                  <%= f.file_field :image %>  
+                </div>
+              </div>
+              
+                <br><br> 
+              <div class="submit-field">
+                  <%= f.submit "Enter Score", :class => "btn btn-block btn-primary"%>
+                </div>
+
+         </div> 
+          
+
+        
+          
     </div>
 <% end %>
