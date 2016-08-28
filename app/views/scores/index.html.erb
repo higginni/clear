@@ -28,13 +28,14 @@
                             </div>
                                   <!-- scores table -->
                                    <thead>
+                                    <%= will_paginate @scores %>
                                         <tr>
                                           <th>Strokes:</th>
                                           <th>Created on:</th>
                                           <th colspan="3"></th>
                                         </tr>
                                   </thead>
-
+                                    
                                         <tbody>
                                           <% @scores.each do |score| %>
                                             <tr>
@@ -48,12 +49,15 @@
                                         </tbody>     
                 </div>
                 </table>
+                  
               </div>        
         </div>
        
 
         <!-- As seen in the controller, the index method handles the logic, the view displays the components that the user understands -->
-        <div class ="col-md-6">                         
+
+
+      <!--   <div class ="col-md-6">                         
                <div class="panel panel-success">
                     <div class="panel-heading">
                     <h1>Stats <button class ="btn btn-success">View Stats</button></h1>
@@ -115,68 +119,27 @@
                 </div>
                   
                 <br>
-          </div>            
-        </div>
-    </div>
-  </div>
-<br>
-
-
-
-  
- 
- 
- 
-
-
- 
-
-
-
-    <div>
-
-              <br>
-              <!-- scores displayed as graphs -->
-           
-                  <div class ="container">
-                    <div class ="row">
+          </div>  -->  
+          
                       <div class="col-md-6">
-                        
-                          <div class="panel panel-primary">
-                                    <div class="panel-heading">
-                                      <h1> Graph </h1>
-                                    </div> 
-                              <div class="panel-body">
-                                    
-                                    <h5 class = "lead">  Here are your scores in a bar chart layout. </h5> 
-                                     <!-- id calling the scores.coffee file to display data  -->
-                                      <div id="mysecondchart" style="height: 250px; width: 100%" ></div>
-                              </div>
-                          </div> 
-                    </div>
-                    
-                
-
-                
-                
-            
-                    
-                      <div class="col-md-6">
-                        <div class="panel panel-warning">
-                              <div class="panel-heading">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
                                 <h1> Graph </h1>
-                              </div> 
+                            </div> 
                               <div class="panel-body">
                                     <h5 class = "lead">  Here are your scores in a line graph layout. </h5>
                                     <!-- id calling the scores.coffee file to display data  -->
-                                    <div id="myfirstchart" style="height: 250px; width: 100%" ></div>
+                                    <div id="myfirstchart" style="height: 300px; width: 100%" ></div>
                               </div>
                         </div>     
                         
                       </div>
-                    </div>
-                    </div>
-                </div>
+  
+
+        </div>
+    </div>
+  </div>
+<br>
 
                 </div>
                

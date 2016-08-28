@@ -1,16 +1,14 @@
 class ScoresController < ApplicationController
   before_action :set_score, only: [:show, :edit, :update, :destroy]
   before_action :authorize, except: [:show, :index]
-  # expose(:scores)
-  # expose(:scores_descriptive_statistics) {User.all.extend(DescriptiveStatistics)}
-  # # GET /scores
-  # GET /scores.json
+ 
   def index  
-  # Taking scores and building as an API   
     respond_to do |format|
       format.html { 
         # Display current users scores in the order of created at descending from most recent. Taking the last 5 scores
-        @scores = current_user.scores.order("created_at DESC").take(5) 
+        @scores = current_user.scores.paginate(:page => params[:page], :per_page => 3).reverse_order
+
+        # @scores = Content.paginate(:page => params[:page], :per_page => 5).reverse_order
         
         @score_user_id = params[:user_id]
       
