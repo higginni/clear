@@ -111,49 +111,36 @@ $(document).ready(function(){
 						<hr>
 					<div>
 					
-  							<!-- bootstrap tabs giving users info on each function -->
-						  <ul class="nav nav-tabs" role="tablist">
-						    <li role="presentation" class="active"><a href="#score" aria-controls="score" role="tab" data-toggle="tab">Enter A Score</a></li>
-						    <li role="presentation"><a href="#Performance" aria-controls="Performance" role="tab" data-toggle="tab">Performance</a></li>
-						   
-						  </ul>
-							<br>
-						  <!-- Tab panes -->
-						<div class="tab-content">
-						    <div role="tabpanel" class="tab-pane fade in active" id="score">
+  						
+						
 						    	<div class ="container">
     								<div class ="row">
-		    							<div class="col-md-6">
-								    		
-								    		<center>	
-								    		<h4>Click on the button below to enter your latest scores. You can even add a picture of your score card, or you and your golf buddies on your latest trip</h4>
-								    			<br>
-								    		<%= link_to "Enter Score", 'scores/new' ,:class => "btn-lg btn-primary"%>
-								    		
-								    		</center>
+		    							<div class="col-md-3">
+                        
 								    	</div>
+                      <div class="col-md-6">
+                        
+                        
+                        <center><%= link_to "Enter Score", 'scores/new' ,:class => "btn-lg btn-block btn-primary"%> 
+                          <br>
+                        <%= link_to "Performance", 'scores/index' ,:class => "btn-lg btn-block btn-success"%></center>
+                        
+                        
+                      </div>
 								    </div>
 								</div>
 
-						    </div>
-						    <div role="tabpanel" class="tab-pane fade in" id="Performance">
-						    	<div class ="container">
-    								<div class ="row">
-		    							<div class="col-md-6">
-								    		<br>
-								    		<center>	
-								    		<h4>Click on the button below to view your personal dashboard including Scores, Stats and Graphs</h4>
-								    			<br>
-								    		<%= link_to "Performance", 'scores/index' ,:class => "btn-lg btn-success"%>
-								    		
-								    		</center>
-								    	</div>
-								    </div>
-								</div>
+						    
+						    
+						    	
+    								
+		    							
+								    
+								
 
-						    </div>
 						   
-						</div>
+						   
+						
 
 					</div>
 
