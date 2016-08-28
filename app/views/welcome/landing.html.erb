@@ -75,14 +75,6 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-
-
-    
   
   <!-- welcome message -->
 				<div>
@@ -91,11 +83,16 @@ $(document).ready(function(){
 						<%= image_tag("Logo_Header.png", :alt => "rss feed", :class => "img-responsive") %>
 						<hr>
 						<p class= "lead">Golf is the only sport where you can play against yourself. So why not keep track of how well you’re competing! </p>
-						<br>
-						<%= link_to "Sign-Up", '/sign_up' ,:class => "btn btn-lg btn-info"%>
-						<br><br>
-						<%= link_to "Find Out More", '#myModal', {:class => "btn btn-lg btn-primary", 'data-target' =>'#myModal', 'data-toggle' => "modal"}%>
-						<!-- <a href="#myModal" class="btn btn-lg btn-primary" data-toggle="modal">Find out more</a> -->
+						<div class = "container">
+              <div class = "row">
+                <div class = "col-md-3"></div>
+                <div class = "col-md-6">
+      						<%= link_to "Sign-Up", '/sign_up' ,:class => "btn btn-block btn-lg btn-info"%>
+      						<br>
+      						<%= link_to "Find Out More", '#myModal', {:class => "btn btn-block btn-lg btn-primary", 'data-target' =>'#myModal', 'data-toggle' => "modal"}%>
+						    </div>
+              </div>
+            </div>
 							
 					</center>										
 				</div>
