@@ -5,7 +5,7 @@ class Score < ActiveRecord::Base
     # gives the user attribute the scores
   	belongs_to :user
     # ensures scores can only be 55+ 
-  	validates_numericality_of :strokes, :only_integer => true, :greater_than_or_equal_to => 55
+  	# validates_numericality_of :strokes, :only_integer => true, :greater_than_or_equal_to => 55
 
   	# searchkick
   	
