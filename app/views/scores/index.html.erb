@@ -41,7 +41,7 @@
                                             <tr>
                                               <td><%= score.strokes %></td>
                                               <td><%= score.created_at.strftime("%d %b. %Y")%></td>
-                                              <td><%= link_to '  ', score, {:class => "btn btn-primary glyphicon glyphicon-eye-open" , 'data-toggle' => 'modal','data-target' =>'#myModal'}%></td> 
+                                              <td><%= link_to '  ', score, {:class => "btn btn-primary glyphicon glyphicon-eye-open hidden-xs hidden-sm hidden-md" , 'data-toggle' => 'modal','data-target' =>'#myModal'}%></td> 
                                               <td><%= link_to '  ', score, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger glyphicon glyphicon-trash"%></td>
                                           
                                             </tr> 
@@ -57,7 +57,7 @@
         <!-- As seen in the controller, the index method handles the logic, the view displays the components that the user understands -->
 
 
-      <!--   <div class ="col-md-6">                         
+         <div class ="col-md-12 hidden-xs hidden-sm hidden-md">                         
                <div class="panel panel-success">
                     <div class="panel-heading">
                     <h1>Stats <button class ="btn btn-success">View Stats</button></h1>
@@ -75,7 +75,7 @@
                             <% if @range == nil %>
                             0
                             <% else %>
-                              <strong><%= @range.round %></strong> (Difference between best score and worst score)
+                              <strong><%= @range.round %></strong> (Spread of score)
                             <% end %>
                           </p>
                           <p>
@@ -83,43 +83,12 @@
                             <% if @avg == nil %> 
                             0
                             <% else %>
-                              <strong><%= @avg.round %></strong> (Sum total of all scores, divided by total number of scores)
-                            <% end %>
-                          </p>  
-                          <p>
-                          Median: 
-                            <% if @median == nil %>
-                            0
-                            <% else %>
-                              <strong><%= @median.round %></strong> (Measure of central tendancy. 50% of scores above, 50% below)
-                            <% end %>
-                            
-                          </p>
-                          <p>
-                          Standard Deviation:
-                            <% if @stDev == nil %>
-                            0
-                            <% else %>
-                              <strong><%= @stDev.round %></strong> (Measure of how likely scores will differ from the mean.)
+                              <strong><%= @avg.round %></strong> (Stroke Average)
                             <% end %>
                           </p>
-                          <p>
-                          Variance:  
-                            <% if @variance == nil %>
-                            0
-                            <% else %>
-                              <strong><%= @variance.round %></strong> (The average of the squared differences from the mean)
-                            <% end %>
-                            </p>
-                            
-                          
-                          
-                            
                     </div>
                 </div>
-                  
-                <br>
-          </div>  --> 
+          </div>   
 
                 <div class = "hidden-xs hidden-sm hidden-md">
                   <div class = "container">
@@ -152,55 +121,6 @@
 
           </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- stats javascript to display the stats after the click -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("p").hide();
-
-    $("button").click(function(){
-        $("p").show(900);
-    });
-});
-</script>
-<script>
-$(document).ready(function(){
-    $("scores").hide();
-
-    $("button").click(function(){
-        $("scores").show(900);
-    });
-});
-</script>
-
-
-<!-- Modal for show score in the scoreboard -->
 <center>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
