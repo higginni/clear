@@ -41,7 +41,7 @@
                                             <tr>
                                               <td><%= score.strokes %></td>
                                               <td><%= score.created_at.strftime("%d %b. %Y")%></td>
-                                              <td><%= link_to '  ', score, {:class => "btn btn-primary glyphicon glyphicon-eye-open" , 'data-toggle' => 'modal','data-target' =>'#myModal'}%></td> 
+                                              <td><%= link_to '  ', score, {:class => "btn btn-primary glyphicon glyphicon-eye-open hidden-xs hidden-sm hidden-md" , 'data-toggle' => 'modal','data-target' =>'#myModal'}%></td> 
                                               <td><%= link_to '  ', score, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger glyphicon glyphicon-trash"%></td>
                                           
                                             </tr> 
